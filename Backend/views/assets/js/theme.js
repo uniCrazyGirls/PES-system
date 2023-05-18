@@ -38,8 +38,6 @@
       };
     });
   }
-    
-
 
   // Prevent the content wrapper from scrolling when the fixed side navigation hovered over
   

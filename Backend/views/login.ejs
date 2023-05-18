@@ -6,7 +6,7 @@
       name="viewport"
       content="width=device-width, initial-scale=1.0, shrink-to-fit=no"
     />
-    <title>Login - Brand</title>
+    <title>Login</title>
     <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css" />
     <link
       rel="stylesheet"
@@ -115,7 +115,8 @@
                         class="btn btn-primary d-block btn-user w-100"
                         id="btnLogin"
                         type="submit"
-                        style="background: #871808">
+                        style="background: #871808"
+                      >
                         Login
                       </button>
                       <hr />
@@ -127,7 +128,8 @@
                         href="http://localhost:8000/forgetpassword"
                         class="small"
                         style="color: rgb(133, 135, 150)"
-                        >Forgot Password?</a>
+                        >Forgot Password?</a
+                      >
                     </div>
                     <div class="text-center">
                       <a
@@ -168,8 +170,23 @@
         if (result.status === "error") {
           alert(result.message);
         } else {
-            console.log('got the token',result.data)
-          alert("Login Success");
+          $(document).ready(function () {
+            console.log("got the token", result.data);
+            alert("Login Success");
+
+            // Send an AJAX request to the server
+            $.ajax({
+              url: "/student/homepage",
+              type: "GET",
+              success: function () {
+                // If the request is successful, redirect to the home page
+                window.location.href = "/student/homepage";
+              },
+              error: function () {
+                // Handle the error case, if needed
+              },
+            });
+          });
         }
       }
     </script>
@@ -177,5 +194,6 @@
     <script src="assets/bootstrap/js/bootstrap.min.js"></script>
     <script src="assets/js/bs-init.js"></script>
     <script src="assets/js/theme.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   </body>
 </html>

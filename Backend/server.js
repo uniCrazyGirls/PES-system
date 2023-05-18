@@ -15,8 +15,6 @@ mongoose.connect(
   }
 );
 
-//connect to routers
-const loginRoute = require("./routers/registerRoute");
 //create app for server.js
 const app = express();
 
@@ -29,13 +27,18 @@ app.listen(PORT, () => {
 // Set the views directory and view engine
 app.set("views", path.join(__dirname, "views"));
 app.set("view engine", "ejs");
+app.use(morgan("dev"));
+// Serve static files
+app.use(express.static(path.join(__dirname, "views")));
+app.use("/student",express.static(path.join(__dirname, "views")));
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
-app.use(morgan("dev"));
+//connect to routers
+const loginRoute = require("./routers/registerRoute");
+const studentRoute = require("./routers/studentRoute")
 
-// Serve static files
-app.use(express.static(path.join(__dirname, "views")));
-
+//nevigate to routes
 app.use("/", loginRoute);
+app.use("/student", studentRoute);

@@ -121,8 +121,7 @@ const login = async (req, res, next) => {
       },
       JWT_SECRET
     );
-
-    return res.json({ status: "ok", data: token });
+     return res.json({ status: "ok", data: token });
   }
 
   res.json({ status: "error", message: "Invalid username or password" });
@@ -158,13 +157,12 @@ const forgetPassword = async (req, res, next) => {
     const token = jwt.sign(payload, secret, { expiresIn: "15m" });
     const link = `http://localhost:8000/resetpassword/${user.id}/${token}`;
     console.log(link);
-
+/*
     // Create a transporter with your email provider's SMTP settings
-    /*
     const transporter = nodemailer.createTransport({
       host: "smtp.gmail.com",
-  port: 587,
-  secure: false,
+      port: 587,
+      secure: false,
       auth: {
         user: "99imalsharathnayake@gmail.com",
         pass: "Imalsha@123",
@@ -186,8 +184,8 @@ const forgetPassword = async (req, res, next) => {
       } else {
         console.log("Email sent:", info.response);
       }
-    });*/
-
+    });
+*/
     res.json({
       status: "success",
       message: "Password reset initiated",
