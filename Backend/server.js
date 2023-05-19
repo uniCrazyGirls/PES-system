@@ -30,15 +30,18 @@ app.set("view engine", "ejs");
 app.use(morgan("dev"));
 // Serve static files
 app.use(express.static(path.join(__dirname, "views")));
-app.use("/student",express.static(path.join(__dirname, "views")));
+app.use("/student", express.static(path.join(__dirname, "views")));
+app.use("/admin", express.static(path.join(__dirname, "views")));
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
 //connect to routers
 const loginRoute = require("./routers/registerRoute");
-const studentRoute = require("./routers/studentRoute")
+const studentRoute = require("./routers/studentRoute");
+const adminRoute = require("./routers/adminRoute");
 
 //nevigate to routes
 app.use("/", loginRoute);
 app.use("/student", studentRoute);
+app.use("/admin", adminRoute);

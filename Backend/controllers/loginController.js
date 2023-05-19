@@ -5,6 +5,7 @@ const jwt = require("jsonwebtoken");
 const JWT_SECRET =
   "elrkgbekrbgaskjdbgaksdjbg;aelsrjdbg;asljdgba;dslfgb;asdjfgb";
 const nodemailer = require("nodemailer");
+const mongoose = require("mongoose");
 
 //nevigate to signup page
 const signupView = async (req, res, next) => {
@@ -64,7 +65,6 @@ const signup = async (req, res, next) => {
   }
 
   const hashPassword1 = await bcrypt.hash(plainTextPasswordA, 10);
-  const hashPassword2 = await bcrypt.hash(plainTextPasswordB, 10);
 
   try {
     const response = await User.create({
@@ -75,7 +75,6 @@ const signup = async (req, res, next) => {
       email,
       phone,
       password: hashPassword1,
-      re_enter_password: hashPassword2,
     });
     console.log("User created successfully", response);
   } catch (error) {
@@ -86,6 +85,7 @@ const signup = async (req, res, next) => {
   }
   return res.json({ status: "ok" });
 };
+//...........................................................................................
 
 //nevigate to login page
 const loginView = async (req, res, next) => {
@@ -121,11 +121,12 @@ const login = async (req, res, next) => {
       },
       JWT_SECRET
     );
-     return res.json({ status: "ok", data: token });
+    return res.json({ status: "ok", data: token });
   }
 
   res.json({ status: "error", message: "Invalid username or password" });
 };
+//................................................................................................
 
 //nevigate to forget password page
 const forgotpasswordView = async (req, res, next) => {
@@ -151,41 +152,45 @@ const forgetPassword = async (req, res, next) => {
     //create one time link and valied for 15 minuits
     const payload = {
       email: user.email,
-      id: user.id,
+      id: user._id,
     };
 
     const token = jwt.sign(payload, secret, { expiresIn: "15m" });
-    const link = `http://localhost:8000/resetpassword/${user.id}/${token}`;
+    const link = `http://localhost:8000/resetpassword/${user._id}/${token}`;
     console.log(link);
-/*
-    // Create a transporter with your email provider's SMTP settings
+
     const transporter = nodemailer.createTransport({
-      host: "smtp.gmail.com",
-      port: 587,
-      secure: false,
+      service: "Gmail", // e.g., Gmail, Yahoo, etc.
       auth: {
-        user: "99imalsharathnayake@gmail.com",
-        pass: "Imalsha@123",
+        user: "faspesdemo@gmail.com",
+        pass: "otknrxvanyqutowm",
       },
     });
 
-    // Construct the email content
     const mailOptions = {
       from: "99imalsharathnayake@gmail.com",
       to: user.email,
-      subject: "Reset Password",
-      text: `Click the link to reset your password: ${link}`,
+      subject: "Password Reset",
+      text: `Click the link below to reset your password:\n${link}`,
     };
 
-    // Send the email
     transporter.sendMail(mailOptions, (error, info) => {
       if (error) {
-        console.log("Error sending email:", error);
-      } else {
-        console.log("Email sent:", info.response);
+        console.error(error);
+        return res.status(500).json({
+          status: "error",
+          message: "Failed to send password reset email",
+        });
       }
+
+      console.log("Email sent:", info.response);
+
+      res.json({
+        status: "success",
+        message: "Password reset initiated",
+      });
     });
-*/
+
     res.json({
       status: "success",
       message: "Password reset initiated",
@@ -199,69 +204,74 @@ const forgetPassword = async (req, res, next) => {
     });
   }
 };
+//..........................................................................................
 
-//nevigate to reset password page
+// Navigate to reset password page
 const resetpasswordView = async (req, res, next) => {
   const { id, token } = req.params;
+
+  const user = await User.findOne({ _id: id }).lean();
+
+  if (!user) {
+    return res.send("Invalid ID");
+  }
+
+  const secret = JWT_SECRET + user.password;
+
   try {
-    const user = await User.findOne({ _id: id }).lean();
-
-    if (!user) {
-      res.send("Invalid ID");
-      return;
-    }
-
-    const secret = JWT_SECRET + user.password;
     const payload = jwt.verify(token, secret);
-    res.render("resetPassword");
+    res.render("resetPassword", { email: user.email });
   } catch (error) {
     console.log(error.message);
     res.send(error.message);
   }
 };
 
-//update the new password
+// Update the new password
 const resetPassword = async (req, res, next) => {
   const { id, token } = req.params;
-  const { password1: plaintext1, password2: plaintext2 } = req.body;
+  const { password1, password2 } = req.body;
 
-  if (plaintext1 !== plaintext2) {
-    return res.json({ status: "error", message: "Passwords do not match" });
+  const user = await User.findOne({ _id: id }).lean();
+
+  if (!user) {
+    return res.send("Invalid user ID");
   }
 
-  if (plaintext1.length < 8) {
-    return res.json({
-      status: "error",
-      message:
-        "Passwords length is too small.It should be al least 8 charactters",
-    });
-  }
-
-  const hashPassword11 = await bcrypt.hash(plaintext1, 10);
-  const hashPassword12 = await bcrypt.hash(plaintext2, 10);
+  const secret = JWT_SECRET + user.password;
 
   try {
-    const user = await User.findOne({ id }).lean();
+    const payload = jwt.verify(token, secret);
 
-    if (id !== user.id) {
-      res.send("invalied id");
-      return;
+    if (password1 !== password2) {
+      return res.json({ status: "error", message: "Passwords do not match" });
     }
 
-    const secret = JWT_SECRET + user.password;
+    if (password1.length < 8) {
+      return res.json({
+        status: "error",
+        message:
+          "Password length is too short. It should be at least 8 characters",
+      });
+    }
 
-    const payload = jwt.verify(token, secret);
-    res.render("resetPassword", { emai: user.email });
+    const hashPassword = await bcrypt.hash(password1, 10);
 
     const response = await User.updateOne(
       { _id: id },
-      { password: hashPassword11, re_enter_password: hashPassword12 }
+      { password: hashPassword }
     );
-
+    
+    res.send(user);
     console.log("User updated successfully", response);
+
+    return res.json({
+      status: "success",
+      message: "Password reset successful",
+    });
   } catch (error) {
     console.log(error.message);
-    res.send(error.message);
+    return res.send(error.message);
   }
 };
 

@@ -22,10 +22,6 @@ const MathResults = async (req, res, next) => {
 const PhysicsResults = async (req, res, next) => {
   res.render("studentViews/studentPhysics");
 };
-//nevigate to logout page
-const Logout = async (req, res, next) => {
-  res.render("studentViews/studentLogout");
-};
 //nevigate to settings page
 const Settings = async (req, res, next) => {
   res.render("studentViews/studentSetting");
@@ -46,7 +42,6 @@ module.exports = {
   ICTResults,
   MathResults,
   PhysicsResults,
-  Logout,
   Settings,
   SubjectsInTheDegree,
   ApplyRecorrection

@@ -9,11 +9,12 @@ const {
   ICTResults,
   MathResults,
   PhysicsResults,
-  Logout,
   Settings,
   SubjectsInTheDegree,
   ApplyRecorrection
 } = require("../controllers/studentController");
+
+const {login}=require("../controllers/loginController")
 
 router.use(bodyParser.urlencoded({ extended: true }));
 router.use(bodyParser.json());
@@ -24,7 +25,7 @@ router.get("/completeresultsheet", CompleteResultSheet);
 router.get("/ictresults", ICTResults);
 router.get("/mathresults", MathResults);
 router.get("/physicsresults", PhysicsResults);
-router.get("/logout", Logout);
+router.get("/logout", login);
 router.get("/settings", Settings);
 router.get("/subjectsinthedegree", SubjectsInTheDegree);
 router.get("/recorrection", ApplyRecorrection);
