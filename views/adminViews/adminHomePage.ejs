@@ -7,12 +7,12 @@
       content="width=device-width, initial-scale=1.0, shrink-to-fit=no"
     />
     <title>Admin Homepage</title>
-    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="/assets/bootstrap/css/bootstrap.min.css" />
     <link
       rel="stylesheet"
       href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i&amp;display=swap"
     />
-    <link rel="stylesheet" href="assets/fonts/fontawesome-all.min.css" />
+    <link rel="stylesheet" href="/assets/fonts/fontawesome-all.min.css" />
   </head>
 
   <body>
@@ -150,6 +150,7 @@
                       "
                     >
                       <button
+                        id="btnMat_1y"
                         class="btn btn-primary"
                         type="button"
                         style="
@@ -173,6 +174,7 @@
                       "
                     >
                       <button
+                        id="btnPhy_y1"
                         class="btn btn-primary d-xl-flex justify-content-xl-center align-items-xl-center"
                         type="button"
                         style="
@@ -196,6 +198,7 @@
                       "
                     >
                       <button
+                        id="btnIct_y1"
                         class="btn btn-primary"
                         type="button"
                         style="
@@ -233,6 +236,7 @@
                       "
                     >
                       <button
+                        id="btnMat_2y"
                         class="btn btn-primary"
                         type="button"
                         style="
@@ -256,6 +260,7 @@
                       "
                     >
                       <button
+                        id="btnPhy_2y"
                         class="btn btn-primary d-xl-flex justify-content-xl-center align-items-xl-center"
                         type="button"
                         style="
@@ -279,6 +284,7 @@
                       "
                     >
                       <button
+                        id="btnIct_2y"
                         class="btn btn-primary"
                         type="button"
                         style="
@@ -316,6 +322,7 @@
                       "
                     >
                       <button
+                      id="btnMat_y3"
                         class="btn btn-primary"
                         type="button"
                         style="
@@ -339,6 +346,7 @@
                       "
                     >
                       <button
+                      id="btnPhy_y3"
                         class="btn btn-primary d-xl-flex justify-content-xl-center align-items-xl-center"
                         type="button"
                         style="
@@ -362,6 +370,7 @@
                       "
                     >
                       <button
+                      id="btnIct_y3"
                         class="btn btn-primary"
                         type="button"
                         style="
@@ -439,8 +448,182 @@
         </div>
       </div>
     </div>
-    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
-    <script src="assets/js/bs-init.js"></script>
-    <script src="assets/js/theme.js"></script>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+      //this is for 1st year mathamatics
+      $(document).ready(function () {
+        // Attach click event handler to the button
+        $("#btnMat_1y").click(function () {
+          // Send an AJAX request to the server
+          $.ajax({
+            url: "/admin/maty1subjects",
+            type: "GET",
+            success: function () {
+              // If the request is successful, redirect to the mathresults page
+              window.location.href = "/admin/maty1subjects";
+            },
+            error: function () {
+              // Handle the error case, if needed
+            },
+          });
+        });
+      });
+
+      //this is for 1st year physics
+      $(document).ready(function () {
+        // Attach click event handler to the button
+        $("#btnPhy_y1").click(function () {
+          // Send an AJAX request to the server
+          $.ajax({
+            url: "/admin/phyy1subjects",
+            type: "GET",
+            success: function () {
+              // If the request is successful, redirect to the mathresults page
+              window.location.href = "/admin/phyy1subjects";
+            },
+            error: function () {
+              // Handle the error case, if needed
+            },
+          });
+        });
+      });
+
+      //this is for 1st year ict
+      $(document).ready(function () {
+        // Attach click event handler to the button
+        $("#btnIct_y1").click(function () {
+          // Send an AJAX request to the server
+          $.ajax({
+            url: "/admin/icty1subjects",
+            type: "GET",
+            success: function () {
+              // If the request is successful, redirect to the mathresults page
+              window.location.href = "/admin/icty1subjects";
+            },
+            error: function () {
+              // Handle the error case, if needed
+            },
+          });
+        });
+      });
+
+      //this is for 2st year mathamatics
+      $(document).ready(function () {
+        // Attach click event handler to the button
+        $("#btnMat_2y").click(function () {
+          // Send an AJAX request to the server
+          $.ajax({
+            url: "/admin/maty2subjects",
+            type: "GET",
+            success: function () {
+              // If the request is successful, redirect to the mathresults page
+              window.location.href = "/admin/maty2subjects";
+            },
+            error: function () {
+              // Handle the error case, if needed
+            },
+          });
+        });
+      });
+
+      //this is for 2st year physics
+      $(document).ready(function () {
+        // Attach click event handler to the button
+        $("#btnPhy_2y").click(function () {
+          // Send an AJAX request to the server
+          $.ajax({
+            url: "/admin/phyy2subjects",
+            type: "GET",
+            success: function () {
+              // If the request is successful, redirect to the mathresults page
+              window.location.href = "/admin/phyy2subjects";
+            },
+            error: function () {
+              // Handle the error case, if needed
+            },
+          });
+        });
+      });
+
+      //this is for 2st year ict
+      $(document).ready(function () {
+        // Attach click event handler to the button
+        $("#btnIct_2y").click(function () {
+          // Send an AJAX request to the server
+          $.ajax({
+            url: "/admin/icty2subjects",
+            type: "GET",
+            success: function () {
+              // If the request is successful, redirect to the mathresults page
+              window.location.href = "/admin/icty2subjects";
+            },
+            error: function () {
+              // Handle the error case, if needed
+            },
+          });
+        });
+      });
+
+      //this is for 3st year mathamatics
+      $(document).ready(function () {
+        // Attach click event handler to the button
+        $("#btnMat_y3").click(function () {
+          // Send an AJAX request to the server
+          $.ajax({
+            url: "/admin/maty3subjects",
+            type: "GET",
+            success: function () {
+              // If the request is successful, redirect to the mathresults page
+              window.location.href = "/admin/maty3subjects";
+            },
+            error: function () {
+              // Handle the error case, if needed
+            },
+          });
+        });
+      });
+
+      //this is for 3st year physics
+      $(document).ready(function () {
+        // Attach click event handler to the button
+        $("#btnPhy_y3").click(function () {
+          // Send an AJAX request to the server
+          $.ajax({
+            url: "/admin/phyy3subjects",
+            type: "GET",
+            success: function () {
+              // If the request is successful, redirect to the mathresults page
+              window.location.href = "/admin/phyy3subjects";
+            },
+            error: function () {
+              // Handle the error case, if needed
+            },
+          });
+        });
+      });
+
+      //this is for 3st year ict
+      $(document).ready(function () {
+        // Attach click event handler to the button
+        $("#btnIct_y3").click(function () {
+          // Send an AJAX request to the server
+          $.ajax({
+            url: "/admin/icty3subjects",
+            type: "GET",
+            success: function () {
+              // If the request is successful, redirect to the mathresults page
+              window.location.href = "/admin/icty3subjects";
+            },
+            error: function () {
+              // Handle the error case, if needed
+            },
+          });
+        });
+      });
+    </script>
+    <script src="/assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="/assets/js/bs-init.js"></script>
+    <script src="/assets/js/theme.js"></script>
   </body>
 </html>
