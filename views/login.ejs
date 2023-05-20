@@ -172,20 +172,15 @@
         } else {
           $(document).ready(function () {
             console.log("got the token", result.data);
-            alert("Login Success");
-
-            // Send an AJAX request to the server
-            $.ajax({
-              url: "/student/homepage",
-              type: "GET",
-              success: function () {
-                // If the request is successful, redirect to the home page
-                window.location.href = "/student/homepage";
-              },
-              error: function () {
-                // Handle the error case, if needed
-              },
-            });
+          
+            const pattern = /^as\d+@/;
+          
+            // Check if the email matches the pattern
+            if (pattern.test(email)) {
+              window.location.href = "/student/homepage";
+            } else {
+              window.location.href = "/admin/homepage";
+            }
           });
         }
       }
