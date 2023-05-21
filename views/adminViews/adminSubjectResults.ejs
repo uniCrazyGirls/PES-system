@@ -29,7 +29,7 @@
                     class="btn btn-primary"
                     role="button"
                     style="background: #871808; border-width: 0px"
-                    href="http://localhost:8000/student/homepage"
+                    href="http://localhost:8000/admin/homepage"
                     ><i class="fas fa-home"></i
                   ></a>
                 </li>
@@ -140,243 +140,98 @@
               </div>
               <div class="card-header py-3 mt-3">
                 <div></div>
+                <div class="card shadow mb-3">
+                  <div class="card-header py-3">
+                    <p style="color: #871808">Enter Result</p>
+                  </div>
+                  <div class="card-body">
+                    <div class="row">
+                      <div class="col">
+                        <form id="enterResultForm" class="user">
+                          <div class="row mb-3">
+                            <div class="col-sm-6 mb-3 mb-sm-0">
+                              <h6 style="margin-left: 10px">Index No</h6>
+                              <input
+                                class="form-control form-control-user"
+                                type="text"
+                                id="indexNo"
+                                placeholder=""
+                                name="Index_No"
+                              />
+                            </div>
+                            <div class="col-sm-6">
+                              <h6 style="margin-left: 10px">Grade</h6>
+                              <input
+                                class="form-control form-control-user"
+                                type="text"
+                                id="grade"
+                                placeholder=""
+                                name="Grade"
+                                style="margin-right: 10px"
+                              />
+                            </div>
+                          </div>
+                          <div class="row d-xl-flex justify-content-xl-end">
+                            <div class="col d-xl-flex justify-content-xl-end">
+                              <button
+                                id="btnAddResults"
+                                class="btn btn-primary d-block d-xl-flex justify-content-xl-center btn-user w-20"
+                                type="submit"
+                                style="
+                                  background: #871808;
+                                  width: 150px;
+                                  margin-right: 30px;
+                                  font-size: 16px;
+                                "
+                              >
+                                ADD
+                              </button>
+                            </div>
+                          </div>
+                        </form>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="col">
+                  <h5 style="margin-left: 20px; margin-top: 25px">
+                    Result Sheet
+                  </h5>
+                </div>
               </div>
               <div class="card-body">
-                <div
-                  class="table-responsive d-lg-flex align-items-lg-center table mt-2"
-                  id="dataTable-1"
-                  role="grid"
-                  aria-describedby="dataTable_info"
-                  style="border-width: 0px"
-                >
-                  <table class="table my-0" id="dataTable">
-                    <thead>
-                      <tr>
-                        <th>No</th>
-                        <th style="text-align: left">Index Number</th>
-                        <th style="text-align: left">Student Name</th>
-                        <th style="text-align: left">Result</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr style="border-width: 0px; border-style: none">
-                        <td>01</td>
-                        <td>AS2019000</td>
-                        <td>Hetti Arachchige Nadeesha Sahani Hettiarachchi</td>
-                        <td style="width: 200px">
-                          <input
-                            type="text"
-                            style="width: 100px; text-align: center"
-                          />
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>02</td>
-                        <td>AS2019001</td>
-                        <td>Imalsha Rathnayake</td>
-                        <td>
-                          <input
-                            type="text"
-                            style="width: 100px; text-align: center"
-                          />
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>03</td>
-                        <td>AS2019002</td>
-                        <td>C</td>
-                        <td>
-                          <input
-                            type="text"
-                            style="width: 100px; text-align: center"
-                          />
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>04</td>
-                        <td>AS2019003</td>
-                        <td>D</td>
-                        <td>
-                          <input
-                            type="text"
-                            style="width: 100px; text-align: center"
-                          />
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>05</td>
-                        <td>AS2019004</td>
-                        <td>E</td>
-                        <td>
-                          <input
-                            type="text"
-                            style="width: 100px; text-align: center"
-                          />
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>06</td>
-                        <td>AS2019005</td>
-                        <td>F</td>
-                        <td>
-                          <input
-                            type="text"
-                            style="width: 100px; text-align: center"
-                          />
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>07</td>
-                        <td>AS2019006</td>
-                        <td>G</td>
-                        <td>
-                          <input
-                            type="text"
-                            style="width: 100px; text-align: center"
-                          />
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>08</td>
-                        <td>AS2019007</td>
-                        <td>H</td>
-                        <td>
-                          <input
-                            type="text"
-                            style="width: 100px; text-align: center"
-                          />
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>09</td>
-                        <td>AS2019008</td>
-                        <td>I</td>
-                        <td>
-                          <input
-                            type="text"
-                            style="width: 100px; text-align: center"
-                          />
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>10</td>
-                        <td>AS2019009</td>
-                        <td>J</td>
-                        <td>
-                          <input
-                            type="text"
-                            style="width: 100px; text-align: center"
-                          />
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>10</td>
-                        <td>AS2019009</td>
-                        <td>J</td>
-                        <td>
-                          <input
-                            type="text"
-                            style="width: 100px; text-align: center"
-                          />
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>10</td>
-                        <td>AS2019009</td>
-                        <td>J</td>
-                        <td>
-                          <input
-                            type="text"
-                            style="width: 100px; text-align: center"
-                          />
-                        </td>
-                      </tr>
-                      <tr>
-                        <td>10</td>
-                        <td>AS2019009</td>
-                        <td>J</td>
-                        <td><input type="text" style="width: 100px" /></td>
-                      </tr>
-                      <tr style="border-style: none">
-                        <td>10</td>
-                        <td>AS2019009</td>
-                        <td>J</td>
-                        <td><input type="text" style="width: 100px" /></td>
-                      </tr>
-                      <tr style="border-style: none">
-                        <td></td>
-                        <td></td>
-                        <td
-                          style="border-color: var(--bs-card-border-color)"
-                        ></td>
-                        <td
-                          style="
-                            color: #ffffff;
-                            border-color: var(--bs-card-border-color);
-                          "
-                        >
-                          <button
-                            class="btn btn-primary d-lg-flex justify-content-lg-center"
-                            type="button"
-                            style="
-                              width: 100px;
-                              margin: 10px;
-                              padding: 10px;
-                              text-align: center;
-                              margin-right: 3px;
-                              padding-left: 0px;
-                              padding-right: 0px;
-                              margin-left: 3px;
-                            "
-                          >
-                            Add New
-                          </button>
-                        </td>
-                      </tr>
-                      <tr style="border-style: none">
-                        <td style="border-color: var(--bs-card-bg)"></td>
-                        <td style="border-color: var(--bs-card-bg)"></td>
-                        <td style="border-color: var(--bs-card-bg)"></td>
-                        <td
-                          style="
-                            color: #ffffff;
-                            border-color: var(--bs-card-bg);
-                          "
-                        >
-                          <button
-                            class="btn btn-primary d-lg-flex justify-content-lg-center"
-                            type="button"
-                            style="
-                              width: 100px;
-                              margin: 10px;
-                              padding: 10px;
-                              text-align: center;
-                              margin-right: 3px;
-                              padding-left: 0px;
-                              padding-right: 0px;
-                              margin-left: 3px;
-                            "
-                          >
-                            Submit
-                          </button>
-                        </td>
-                      </tr>
-                      <tr style="border-style: none">
-                        <td></td>
-                        <td></td>
-                        <td style="border-color: #ffffff"></td>
-                      </tr>
-                    </tbody>
-                    <tfoot
-                      style="
-                        border-style: none;
-                        border-color: rgb(249, 249, 249);
-                      "
-                    >
-                      <tr></tr>
-                    </tfoot>
-                  </table>
-                </div>
+                <form>
+                  <div
+                    class="table-responsive d-lg-flex align-items-lg-center table mt-2"
+                    id="dataTable-1"
+                    role="grid"
+                    aria-describedby="dataTable_info"
+                    style="border-width: 0px"
+                  >
+                    <table class="table my-0" id="dataTable">
+                      <thead>
+                        <tr>
+                          <th>No</th>
+                          <th style="text-align: left">Index Number</th>
+                          <th style="text-align: left">Result</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        
+                      </tbody>
+                      <tfoot
+                        style="
+                          border-style: none;
+                          border-color: rgb(249, 249, 249);
+                        "
+                      >
+                        <tr></tr>
+                      </tfoot>
+                    </table>
+                  </div>
+                </form>
               </div>
             </div>
           </div>
@@ -393,6 +248,69 @@
         ><i class="fas fa-angle-up"></i
       ></a>
     </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+      // Get the button element
+      var btnAddResults = document.getElementById("btnAddResults");
+    
+      // Add click event listener to the button
+      btnAddResults.addEventListener("click", function (event) {
+        event.preventDefault(); // Prevent form submission
+    
+        // Get the table body element
+        var tableBody = document.querySelector("#dataTable tbody");
+    
+        // Get the values from the input fields
+        var indexNumber = document.getElementById("indexNo").value;
+        var grade = document.getElementById("grade").value;
+    
+        // Create a new row and cells
+        var newRow = document.createElement("tr");
+        var indexCell = document.createElement("td");
+        var numberCell = document.createElement("td");
+        var resultCell = document.createElement("td");
+    
+        // Set the cell values
+        indexCell.textContent = tableBody.children.length + 1; // Set the number sequentially
+        numberCell.textContent = indexNumber;
+        resultCell.textContent = grade;
+    
+        // Append the cells to the new row
+        newRow.appendChild(indexCell);
+        newRow.appendChild(numberCell);
+        newRow.appendChild(resultCell);
+    
+        // Append the new row to the table body
+        tableBody.appendChild(newRow);
+    
+        // Reset the input fields
+        document.getElementById("indexNo").value = "";
+        document.getElementById("grade").value = "";
+      });
+    
+      const form = document.getElementById("enterResultForm");
+      form.addEventListener("submit", addResult);
+    
+      async function addResult(event) {
+        event.preventDefault();
+        const Index_No = document.getElementById("indexNo").value;
+        const Grade = document.getElementById("grade").value;
+    
+        const result = await fetch("/login", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({
+            Index_No,
+            Grade,
+          }),
+        }).then((res) => res.json());
+        console.log(result);
+        if (result.status === "error") {
+          alert(result.message);
+        }
+      }
+    </script>
+    
     <script src="assets/bootstrap/js/bootstrap.min.js"></script>
     <script src="assets/js/bs-init.js"></script>
     <script src="assets/js/theme.js"></script>

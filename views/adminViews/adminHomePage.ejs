@@ -26,7 +26,7 @@
               class="btn btn-primary"
               role="button"
               style="background: #871808; border-width: 0px"
-              href="http://localhost:8000/student/homepage"
+              href="http://localhost:8000/admin/homepage"
               ><i class="fas fa-home"></i
             ></a>
           </li>
@@ -133,7 +133,7 @@
           <div class="card shadow d-xxl-flex mb-4">
             <div class="card-header">
               <h6 class="text-primary fw-bold m-0" style="color: rgb(0, 0, 0)">
-                1st Year Subject Results
+                1st Year
               </h6>
             </div>
             <div class="card-body">
@@ -219,7 +219,7 @@
           <div class="card shadow d-xxl-flex mb-4">
             <div class="card-header">
               <h6 class="text-primary fw-bold m-0" style="color: rgb(0, 0, 0)">
-                2nd Year Subject Results
+                2nd Year
               </h6>
             </div>
             <div class="card-body">
@@ -305,7 +305,7 @@
           <div class="card shadow d-xxl-flex mb-4">
             <div class="card-header">
               <h6 class="text-primary fw-bold m-0" style="color: rgb(0, 0, 0)">
-                3rd year Subject Results
+                3rd year
               </h6>
             </div>
             <div class="card-body">
@@ -322,7 +322,7 @@
                       "
                     >
                       <button
-                      id="btnMat_y3"
+                        id="btnMat_y3"
                         class="btn btn-primary"
                         type="button"
                         style="
@@ -346,7 +346,7 @@
                       "
                     >
                       <button
-                      id="btnPhy_y3"
+                        id="btnPhy_y3"
                         class="btn btn-primary d-xl-flex justify-content-xl-center align-items-xl-center"
                         type="button"
                         style="
@@ -370,7 +370,7 @@
                       "
                     >
                       <button
-                      id="btnIct_y3"
+                        id="btnIct_y3"
                         class="btn btn-primary"
                         type="button"
                         style="
@@ -457,7 +457,7 @@
         $("#btnMat_1y").click(function () {
           // Send an AJAX request to the server
           $.ajax({
-            url: "/admin/maty1subjects",
+            url: "/admin/homepage",
             type: "GET",
             success: function () {
               // If the request is successful, redirect to the mathresults page
@@ -476,7 +476,7 @@
         $("#btnPhy_y1").click(function () {
           // Send an AJAX request to the server
           $.ajax({
-            url: "/admin/phyy1subjects",
+            url: "/admin/homepage",
             type: "GET",
             success: function () {
               // If the request is successful, redirect to the mathresults page
@@ -495,7 +495,7 @@
         $("#btnIct_y1").click(function () {
           // Send an AJAX request to the server
           $.ajax({
-            url: "/admin/icty1subjects",
+            url: "/admin/homepage",
             type: "GET",
             success: function () {
               // If the request is successful, redirect to the mathresults page
@@ -514,7 +514,7 @@
         $("#btnMat_2y").click(function () {
           // Send an AJAX request to the server
           $.ajax({
-            url: "/admin/maty2subjects",
+            url: "/admin/homepage",
             type: "GET",
             success: function () {
               // If the request is successful, redirect to the mathresults page
@@ -533,7 +533,7 @@
         $("#btnPhy_2y").click(function () {
           // Send an AJAX request to the server
           $.ajax({
-            url: "/admin/phyy2subjects",
+            url: "/admin/homepage",
             type: "GET",
             success: function () {
               // If the request is successful, redirect to the mathresults page
@@ -552,7 +552,7 @@
         $("#btnIct_2y").click(function () {
           // Send an AJAX request to the server
           $.ajax({
-            url: "/admin/icty2subjects",
+            url: "/admin/homepage",
             type: "GET",
             success: function () {
               // If the request is successful, redirect to the mathresults page
@@ -571,7 +571,7 @@
         $("#btnMat_y3").click(function () {
           // Send an AJAX request to the server
           $.ajax({
-            url: "/admin/maty3subjects",
+            url: "/admin/homepage",
             type: "GET",
             success: function () {
               // If the request is successful, redirect to the mathresults page
@@ -590,7 +590,7 @@
         $("#btnPhy_y3").click(function () {
           // Send an AJAX request to the server
           $.ajax({
-            url: "/admin/phyy3subjects",
+            url: "/admin/homepage",
             type: "GET",
             success: function () {
               // If the request is successful, redirect to the mathresults page
@@ -609,7 +609,7 @@
         $("#btnIct_y3").click(function () {
           // Send an AJAX request to the server
           $.ajax({
-            url: "/admin/icty3subjects",
+            url: "/admin/homepage",
             type: "GET",
             success: function () {
               // If the request is successful, redirect to the mathresults page

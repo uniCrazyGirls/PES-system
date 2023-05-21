@@ -9,8 +9,11 @@ const schema = new mongoose.Schema(
     email: { type: String, required: true, unique: true },
     phone: { type: String, required: true, unique: true },
     password: { type: String, required: true },
+
+    // Reference to AdminModel (results)
+    admin: {type: mongoose.Schema.Types.ObjectId, ref: "AdminModel",},
   },
-  { collection: "users" } // Use 'collection' instead of 'collation'
+  { collection: "users" }
 );
 //create a user in users collection in pes db
 const User = mongoose.model("User", schema);
