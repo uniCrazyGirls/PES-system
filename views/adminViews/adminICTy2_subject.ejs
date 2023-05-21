@@ -176,7 +176,7 @@
                           </h6>
                         </td>
                         <td>
-                          <button class="btn btn-primary" type="button">
+                          <button id="btnDataStructures" class="btn btn-primary" type="button">
                             Enter
                           </button>
                         </td>
@@ -189,7 +189,7 @@
                           <h6>Operating System</h6>
                         </td>
                         <td>
-                          <button class="btn btn-primary" type="button">
+                          <button id="btnOS" class="btn btn-primary" type="button">
                             Enter
                           </button>
                         </td>
@@ -202,7 +202,7 @@
                           <h6>Database &amp; System Administration</h6>
                         </td>
                         <td>
-                          <button class="btn btn-primary" type="button">
+                          <button id="btnDatabase" class="btn btn-primary" type="button">
                             Enter
                           </button>
                         </td>
@@ -241,7 +241,7 @@
                           <h6>User Interface Design &amp; Implementation</h6>
                         </td>
                         <td>
-                          <button class="btn btn-primary" type="button">
+                          <button id="btnUI" class="btn btn-primary" type="button">
                             Enter
                           </button>
                         </td>
@@ -254,7 +254,7 @@
                           <h6>Computer Network &amp; System Administration</h6>
                         </td>
                         <td>
-                          <button class="btn btn-primary" type="button">
+                          <button id="btnNetworks" class="btn btn-primary" type="button">
                             Enter
                           </button>
                         </td>
@@ -267,7 +267,7 @@
                           <h6>Visual Computing&nbsp;</h6>
                         </td>
                         <td>
-                          <button class="btn btn-primary" type="button">
+                          <button id="btnVisualComputing" class="btn btn-primary" type="button">
                             Enter
                           </button>
                         </td>
@@ -294,6 +294,124 @@
         ><i class="fas fa-angle-up"></i
       ></a>
     </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+      //FundamentalOfComputerProgramming
+      $(document).ready(function () {
+        // Attach click event handler to the button
+        $("#btnDataStructures").click(function () {
+          // Send an AJAX request to the server
+          $.ajax({
+            url: "/admin/icty2subjects",
+            type: "GET",
+            success: function () {
+              // If the request is successful, redirect to the mathresults page
+              window.location.href = "/admin/inputresults";
+            },
+            error: function () {
+              // Handle the error case, if needed
+            },
+          });
+        });
+      });
+
+      //FundamentalOfComputerProgramming
+      $(document).ready(function () {
+        // Attach click event handler to the button
+        $("#btnOS").click(function () {
+          // Send an AJAX request to the server
+          $.ajax({
+            url: "/admin/icty2subjects",
+            type: "GET",
+            success: function () {
+              // If the request is successful, redirect to the mathresults page
+              window.location.href = "/admin/inputresults";
+            },
+            error: function () {
+              // Handle the error case, if needed
+            },
+          });
+        });
+      });
+
+      //FundamentalOfComputerProgramming
+      $(document).ready(function () {
+        // Attach click event handler to the button
+        $("#btnDatabase").click(function () {
+          // Send an AJAX request to the server
+          $.ajax({
+            url: "/admin/icty2subjects",
+            type: "GET",
+            success: function () {
+              // If the request is successful, redirect to the mathresults page
+              window.location.href = "/admin/inputresults";
+            },
+            error: function () {
+              // Handle the error case, if needed
+            },
+          });
+        });
+      });
+
+      //FundamentalOfComputerProgramming
+      $(document).ready(function () {
+        // Attach click event handler to the button
+        $("#btnUI").click(function () {
+          // Send an AJAX request to the server
+          $.ajax({
+            url: "/admin/icty2subjects",
+            type: "GET",
+            success: function () {
+              // If the request is successful, redirect to the mathresults page
+              window.location.href = "/admin/inputresults";
+            },
+            error: function () {
+              // Handle the error case, if needed
+            },
+          });
+        });
+      });
+
+      //FundamentalOfComputerProgramming
+      $(document).ready(function () {
+        // Attach click event handler to the button
+        $("#btnNetworks").click(function () {
+          // Send an AJAX request to the server
+          $.ajax({
+            url: "/admin/icty2subjects",
+            type: "GET",
+            success: function () {
+              // If the request is successful, redirect to the mathresults page
+              window.location.href = "/admin/inputresults";
+            },
+            error: function () {
+              // Handle the error case, if needed
+            },
+          });
+        });
+      });
+
+      //FundamentalOfComputerProgramming
+      $(document).ready(function () {
+        // Attach click event handler to the button
+        $("#btnVisualComputing").click(function () {
+          // Send an AJAX request to the server
+          $.ajax({
+            url: "/admin/icty2subjects",
+            type: "GET",
+            success: function () {
+              // If the request is successful, redirect to the mathresults page
+              window.location.href = "/admin/inputresults";
+            },
+            error: function () {
+              // Handle the error case, if needed
+            },
+          });
+        });
+      });
+
+    </script>
+
     <script src="assets/bootstrap/js/bootstrap.min.js"></script>
     <script src="assets/js/bs-init.js"></script>
     <script src="assets/js/theme.js"></script>

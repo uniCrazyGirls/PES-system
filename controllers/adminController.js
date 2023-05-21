@@ -61,12 +61,7 @@ const PHY_Y3_SubjectsView = async (req, res, next) => {
 
 //nevigate to home page
 const HomePage = async (req, res, next) => {
-  // Handle the POST request here
-  const { streamName, yearName } = req.body;
-  console.log('\n stream name is:',streamName)
-  console.log('\n year name is:',yearName)
-  // Send a response back to the client
-  res.sendStatus(200); // Assuming a successful response with status code 200
+ 
 };
 //nevigate to admin settings page
 const Setting = async (req, res, next) => {

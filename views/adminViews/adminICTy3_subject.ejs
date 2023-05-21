@@ -172,7 +172,7 @@
                           <h6>Multimedia Technologies</h6>
                         </td>
                         <td>
-                          <button class="btn btn-primary" type="button">
+                          <button id="btnMultimeedia" class="btn btn-primary" type="button">
                             Enter
                           </button>
                         </td>
@@ -185,7 +185,7 @@
                           <h6>Embedded System</h6>
                         </td>
                         <td>
-                          <button class="btn btn-primary" type="button">
+                          <button id="btnEMbeddedSystem" class="btn btn-primary" type="button">
                             Enter
                           </button>
                         </td>
@@ -200,7 +200,7 @@
                           </h6>
                         </td>
                         <td>
-                          <button class="btn btn-primary" type="button">
+                          <button id="btnMobileTechnologies" class="btn btn-primary" type="button">
                             Enter
                           </button>
                         </td>
@@ -213,7 +213,7 @@
                           <h6>Introduction To Artificial Intelligence</h6>
                         </td>
                         <td>
-                          <button class="btn btn-primary" type="button">
+                          <button id="btnAI" class="btn btn-primary" type="button">
                             Enter
                           </button>
                         </td>
@@ -256,7 +256,7 @@
                           </h6>
                         </td>
                         <td>
-                          <button class="btn btn-primary" type="button">
+                          <button id="btnSoftwareArchitecture" class="btn btn-primary" type="button">
                             Enter
                           </button>
                         </td>
@@ -269,7 +269,7 @@
                           <h6>Software Quality Assurance</h6>
                         </td>
                         <td>
-                          <button class="btn btn-primary" type="button">
+                          <button id="btnQA" class="btn btn-primary" type="button">
                             Enter
                           </button>
                         </td>
@@ -282,7 +282,7 @@
                           <h6>Human Computer Interaction</h6>
                         </td>
                         <td>
-                          <button class="btn btn-primary" type="button">
+                          <button id="btnHCI" class="btn btn-primary" type="button">
                             Enter
                           </button>
                         </td>
@@ -295,7 +295,7 @@
                           <h6>Data Mining &amp; Warehousing</h6>
                         </td>
                         <td>
-                          <button class="btn btn-primary" type="button">
+                          <button id="btnDataMinning" class="btn btn-primary" type="button">
                             Enter
                           </button>
                         </td>
@@ -308,7 +308,7 @@
                           <h6>Project ( Individual / Group )</h6>
                         </td>
                         <td>
-                          <button class="btn btn-primary" type="button">
+                          <button id="btnProject" class="btn btn-primary" type="button">
                             Enter
                           </button>
                         </td>
@@ -335,6 +335,181 @@
         ><i class="fas fa-angle-up"></i
       ></a>
     </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+      //FundamentalOfComputerProgramming
+      $(document).ready(function () {
+        // Attach click event handler to the button
+        $("#btnMultimeedia").click(function () {
+          // Send an AJAX request to the server
+          $.ajax({
+            url: "/admin/icty3subjects",
+            type: "GET",
+            success: function () {
+              // If the request is successful, redirect to the mathresults page
+              window.location.href = "/admin/inputresults";
+            },
+            error: function () {
+              // Handle the error case, if needed
+            },
+          });
+        });
+      });
+
+      //FundamentalOfComputerProgramming
+      $(document).ready(function () {
+        // Attach click event handler to the button
+        $("#btnEMbeddedSystem").click(function () {
+          // Send an AJAX request to the server
+          $.ajax({
+            url: "/admin/icty3subjects",
+            type: "GET",
+            success: function () {
+              // If the request is successful, redirect to the mathresults page
+              window.location.href = "/admin/inputresults";
+            },
+            error: function () {
+              // Handle the error case, if needed
+            },
+          });
+        });
+      });
+
+      //FundamentalOfComputerProgramming
+      $(document).ready(function () {
+        // Attach click event handler to the button
+        $("#btnMobileTechnologies").click(function () {
+          // Send an AJAX request to the server
+          $.ajax({
+            url: "/admin/icty3subjects",
+            type: "GET",
+            success: function () {
+              // If the request is successful, redirect to the mathresults page
+              window.location.href = "/admin/inputresults";
+            },
+            error: function () {
+              // Handle the error case, if needed
+            },
+          });
+        });
+      });
+
+      //FundamentalOfComputerProgramming
+      $(document).ready(function () {
+        // Attach click event handler to the button
+        $("#btnAI").click(function () {
+          // Send an AJAX request to the server
+          $.ajax({
+            url: "/admin/icty3subjects",
+            type: "GET",
+            success: function () {
+              // If the request is successful, redirect to the mathresults page
+              window.location.href = "/admin/inputresults";
+            },
+            error: function () {
+              // Handle the error case, if needed
+            },
+          });
+        });
+      });
+
+      //FundamentalOfComputerProgramming
+      $(document).ready(function () {
+        // Attach click event handler to the button
+        $("#btnSoftwareArchitecture").click(function () {
+          // Send an AJAX request to the server
+          $.ajax({
+            url: "/admin/icty3subjects",
+            type: "GET",
+            success: function () {
+              // If the request is successful, redirect to the mathresults page
+              window.location.href = "/admin/inputresults";
+            },
+            error: function () {
+              // Handle the error case, if needed
+            },
+          });
+        });
+      });
+
+      //FundamentalOfComputerProgramming
+      $(document).ready(function () {
+        // Attach click event handler to the button
+        $("#btnQA").click(function () {
+          // Send an AJAX request to the server
+          $.ajax({
+            url: "/admin/icty3subjects",
+            type: "GET",
+            success: function () {
+              // If the request is successful, redirect to the mathresults page
+              window.location.href = "/admin/inputresults";
+            },
+            error: function () {
+              // Handle the error case, if needed
+            },
+          });
+        });
+      });
+
+      //FundamentalOfComputerProgramming
+      $(document).ready(function () {
+        // Attach click event handler to the button
+        $("#btnHCI").click(function () {
+          // Send an AJAX request to the server
+          $.ajax({
+            url: "/admin/icty3subjects",
+            type: "GET",
+            success: function () {
+              // If the request is successful, redirect to the mathresults page
+              window.location.href = "/admin/inputresults";
+            },
+            error: function () {
+              // Handle the error case, if needed
+            },
+          });
+        });
+      });
+
+      //FundamentalOfComputerProgramming
+      $(document).ready(function () {
+        // Attach click event handler to the button
+        $("#btnDataMinning").click(function () {
+          // Send an AJAX request to the server
+          $.ajax({
+            url: "/admin/icty3subjects",
+            type: "GET",
+            success: function () {
+              // If the request is successful, redirect to the mathresults page
+              window.location.href = "/admin/inputresults";
+            },
+            error: function () {
+              // Handle the error case, if needed
+            },
+          });
+        });
+      });
+
+      //FundamentalOfComputerProgramming
+      $(document).ready(function () {
+        // Attach click event handler to the button
+        $("#btnProject").click(function () {
+          // Send an AJAX request to the server
+          $.ajax({
+            url: "/admin/icty3subjects",
+            type: "GET",
+            success: function () {
+              // If the request is successful, redirect to the mathresults page
+              window.location.href = "/admin/inputresults";
+            },
+            error: function () {
+              // Handle the error case, if needed
+            },
+          });
+        });
+      });
+    </script>
+
     <script src="assets/bootstrap/js/bootstrap.min.js"></script>
     <script src="assets/js/bs-init.js"></script>
     <script src="assets/js/theme.js"></script>
