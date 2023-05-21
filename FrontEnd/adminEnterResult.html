@@ -58,20 +58,25 @@
                                     <p style="color: #871808;">Enter Result</p>
                                 </div>
                                 <div class="card-body">
-                                    <form>
-                                        <div class="row">
-                                            <div class="col">
-                                                <div class="mb-3"><label class="form-label" for="username"><strong>Index No&nbsp;</strong></label><input class="form-control" type="text" id="username-1" placeholder="user.name" name="username"></div>
-                                            </div>
-                                            <div class="col">
-                                                <div class="mb-3"><label class="form-label" for="username"><strong>Name&nbsp;</strong></label><input class="form-control" type="text" id="username-2" placeholder="user.name" name="username"></div>
-                                            </div>
-                                            <div class="col">
-                                                <div class="mb-3"><label class="form-label" for="email"><strong>Grade</strong></label><input class="form-control" type="email" id="email-1" placeholder="user@example.com" name="email"></div>
-                                            </div>
+                                    <div class="row">
+                                        <div class="col">
+                                            <form class="user">
+                                                <div class="mb-3"><label class="form-label">&nbsp; Index No&nbsp;</label><input class="form-control form-control-user" type="email" id="exampleInputEmail" aria-describedby="emailHelp" placeholder="Enter Email Address..." name="email"></div>
+                                            </form>
                                         </div>
-                                        <div class="d-xl-flex justify-content-xl-end mb-3"><button class="btn btn-primary btn-sm" type="submit" style="background: #871808;">ADD</button></div>
-                                    </form>
+                                        <div class="col">
+                                            <form class="user">
+                                                <div class="mb-3"><label class="form-label">&nbsp; Grade</label><input class="form-control form-control-user" type="email" id="exampleInputEmail-1" aria-describedby="emailHelp" placeholder="Enter Email Address..." name="email"></div>
+                                            </form>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col"></div>
+                                        <div class="col"></div>
+                                        <div class="col"></div>
+                                        <div class="col"></div>
+                                        <div class="col" style="width: 250px;"><button class="btn btn-primary d-block d-xl-flex justify-content-xl-center btn-user w-100" type="submit" style="background: #871808;font-size: 16px;margin-top: 20px;width: 20px;margin-right: 3px;margin-left: -2px;">ADD</button></div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -176,22 +181,18 @@
                                             <td>J</td>
                                             <td><input type="text" style="width: 100px;"></td>
                                         </tr>
-                                        <tr style="border-style: none;">
-                                            <td style="border-color: var(--bs-card-bg);"></td>
-                                            <td style="border-color: var(--bs-card-bg);"></td>
-                                            <td style="border-color: var(--bs-card-bg);"></td>
-                                            <td style="color: #ffffff;border-color: var(--bs-card-bg);"><button class="btn btn-primary d-lg-flex justify-content-lg-center" type="button" style="width: 100px;margin: 10px;padding: 10px;text-align: center;margin-right: 3px;padding-left: 0px;padding-right: 0px;margin-left: 3px;">Submit</button></td>
-                                        </tr>
-                                        <tr style="border-style: none;">
-                                            <td></td>
-                                            <td></td>
-                                            <td style="border-color: #ffffff;"></td>
-                                        </tr>
                                     </tbody>
                                     <tfoot style="border-style: none;border-color: rgb(249,249,249);">
                                         <tr></tr>
                                     </tfoot>
                                 </table>
+                            </div>
+                            <div class="row">
+                                <div class="col"></div>
+                                <div class="col"></div>
+                                <div class="col"></div>
+                                <div class="col"></div>
+                                <div class="col-xl-2" style="width: 300px;"><button class="btn btn-primary d-block d-xl-flex justify-content-xl-center btn-user w-100" type="submit" style="background: #871808;font-size: 16px;margin-top: 20px;width: 20px;margin-left: -2px;margin-right: -1px;">SUBMIT</button></div>
                             </div>
                         </div>
                     </div>
