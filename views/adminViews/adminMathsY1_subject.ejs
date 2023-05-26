@@ -170,7 +170,7 @@
                           <h6>Complex Numbers And Vectors</h6>
                         </td>
                         <td>
-                          <button class="btn btn-primary" type="button">
+                          <button class="btnComplexNumberAndVectors" type="button">
                             Enter
                           </button>
                         </td>
@@ -183,7 +183,7 @@
                           <h6>Differential Equation</h6>
                         </td>
                         <td>
-                          <button class="btn btn-primary" type="button">
+                          <button class="btnDifferentialEquation" type="button">
                             Enter
                           </button>
                         </td>
@@ -196,7 +196,7 @@
                           <h6>Fundamentals Of Logic And Set Theory</h6>
                         </td>
                         <td>
-                          <button class="btn btn-primary" type="button">
+                          <button class="btnFundamentalOfLogicAndSetTheory" type="button">
                             Enter
                           </button>
                         </td>
@@ -235,7 +235,7 @@
                           <h6>Linear Algebra I</h6>
                         </td>
                         <td>
-                          <button class="btn btn-primary" type="button">
+                          <button class="btnLinearAlgebraI" type="button">
                             Enter
                           </button>
                         </td>
@@ -248,7 +248,7 @@
                           <h6>Calculus</h6>
                         </td>
                         <td>
-                          <button class="btn btn-primary" type="button">
+                          <button class="btnCalculus" type="button">
                             Enter
                           </button>
                         </td>
@@ -266,7 +266,7 @@
                           </h6>
                         </td>
                         <td>
-                          <button class="btn btn-primary" type="button">
+                          <button class="btnvectorCalculus" type="button">
                             Enter
                           </button>
                         </td>
@@ -293,6 +293,125 @@
         ><i class="fas fa-angle-up"></i
       ></a>
     </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+      //FundamentalOfComputerProgramming
+      $(document).ready(function () {
+        // Attach click event handler to the button
+        $("#btnComplexNumberAndVectors").click(function () {
+          // Send an AJAX request to the server
+          $.ajax({
+            url: "/admin/maty1subjects",
+            type: "GET",
+            success: function () {
+              // If the request is successful, redirect to the mathresults page
+              window.location.href = "/admin/inputresults";
+            },
+            error: function () {
+              // Handle the error case, if needed
+            },
+          });
+        });
+      });
+
+      //FundamentalOfComputerProgramming
+      $(document).ready(function () {
+        // Attach click event handler to the button
+        $("#btnDifferentialEquation").click(function () {
+          // Send an AJAX request to the server
+          $.ajax({
+            url: "/admin/maty1subjects",
+            type: "GET",
+            success: function () {
+              // If the request is successful, redirect to the mathresults page
+              window.location.href = "/admin/inputresults";
+            },
+            error: function () {
+              // Handle the error case, if needed
+            },
+          });
+        });
+      });
+
+      //FundamentalOfComputerProgramming
+      $(document).ready(function () {
+        // Attach click event handler to the button
+        $("#btnFundamentalOfLogicAndSetTheory").click(function () {
+          // Send an AJAX request to the server
+          $.ajax({
+            url: "/admin/maty1subjects",
+            type: "GET",
+            success: function () {
+              // If the request is successful, redirect to the mathresults page
+              window.location.href = "/admin/inputresults";
+            },
+            error: function () {
+              // Handle the error case, if needed
+            },
+          });
+        });
+      });
+
+      
+
+      //FundamentalOfComputerProgramming
+      $(document).ready(function () {
+        // Attach click event handler to the button
+        $("#btnLinearAlgebraI").click(function () {
+          // Send an AJAX request to the server
+          $.ajax({
+            url: "/admin/maty1subjects",
+            type: "GET",
+            success: function () {
+              // If the request is successful, redirect to the mathresults page
+              window.location.href = "/admin/inputresults";
+            },
+            error: function () {
+              // Handle the error case, if needed
+            },
+          });
+        });
+      });
+
+      //FundamentalOfComputerProgramming
+      $(document).ready(function () {
+        // Attach click event handler to the button
+        $("#btnCalculus").click(function () {
+          // Send an AJAX request to the server
+          $.ajax({
+            url: "/admin/maty1subjects",
+            type: "GET",
+            success: function () {
+              // If the request is successful, redirect to the mathresults page
+              window.location.href = "/admin/inputresults";
+            },
+            error: function () {
+              // Handle the error case, if needed
+            },
+          });
+        });
+      });
+
+      //FundamentalOfComputerProgramming
+      $(document).ready(function () {
+        // Attach click event handler to the button
+        $("#btnvectorCalculus").click(function () {
+          // Send an AJAX request to the server
+          $.ajax({
+            url: "/admin/maty1subjects",
+            type: "GET",
+            success: function () {
+              // If the request is successful, redirect to the mathresults page
+              window.location.href = "/admin/inputresults";
+            },
+            error: function () {
+              // Handle the error case, if needed
+            },
+          });
+        });
+      });
+
+    </script>
     <script src="assets/bootstrap/js/bootstrap.min.js"></script>
     <script src="assets/js/bs-init.js"></script>
     <script src="assets/js/theme.js"></script>

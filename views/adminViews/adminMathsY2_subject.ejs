@@ -170,7 +170,7 @@
                           <h6>Linear Algebra II</h6>
                         </td>
                         <td>
-                          <button class="btn btn-primary" type="button">
+                          <button class="btnLinearAlgebraII" type="button">
                             Enter
                           </button>
                         </td>
@@ -183,7 +183,7 @@
                           <h6>Real Analysis I</h6>
                         </td>
                         <td>
-                          <button class="btn btn-primary" type="button">
+                          <button class="btnRealAnalysisI" type="button">
                             Enter
                           </button>
                         </td>
@@ -200,7 +200,7 @@
                           </h6>
                         </td>
                         <td>
-                          <button class="btn btn-primary" type="button">
+                          <button class="btnNumericalMethods" type="button">
                             Enter
                           </button>
                         </td>
@@ -239,7 +239,7 @@
                           <h6>Functions Of Several Variables</h6>
                         </td>
                         <td>
-                          <button class="btn btn-primary" type="button">
+                          <button class="btnFunctionsOfSeveralVariables" type="button">
                             Enter
                           </button>
                         </td>
@@ -252,7 +252,7 @@
                           <h6>Partial Differential Equation</h6>
                         </td>
                         <td>
-                          <button class="btn btn-primary" type="button">
+                          <button class="btnPartialDifferentialEquation" type="button">
                             Enter
                           </button>
                         </td>
@@ -269,7 +269,7 @@
                           </h6>
                         </td>
                         <td>
-                          <button class="btn btn-primary" type="button">
+                          <button class="btnBasicsOfNumberTheory" type="button">
                             Enter
                           </button>
                         </td>
@@ -296,6 +296,122 @@
         ><i class="fas fa-angle-up"></i
       ></a>
     </div>
+    <script>
+      //FundamentalOfComputerProgramming
+      $(document).ready(function () {
+        // Attach click event handler to the button
+        $("#btnLinearAlgebraII").click(function () {
+          // Send an AJAX request to the server
+          $.ajax({
+            url: "/admin/maty2subjects",
+            type: "GET",
+            success: function () {
+              // If the request is successful, redirect to the mathresults page
+              window.location.href = "/admin/inputresults";
+            },
+            error: function () {
+              // Handle the error case, if needed
+            },
+          });
+        });
+      });
+
+      //FundamentalOfComputerProgramming
+      $(document).ready(function () {
+        // Attach click event handler to the button
+        $("#btnRealAnalysisI").click(function () {
+          // Send an AJAX request to the server
+          $.ajax({
+            url: "/admin/maty2subjects",
+            type: "GET",
+            success: function () {
+              // If the request is successful, redirect to the mathresults page
+              window.location.href = "/admin/inputresults";
+            },
+            error: function () {
+              // Handle the error case, if needed
+            },
+          });
+        });
+      });
+
+      //FundamentalOfComputerProgramming
+      $(document).ready(function () {
+        // Attach click event handler to the button
+        $("#btnNumericalMethods").click(function () {
+          // Send an AJAX request to the server
+          $.ajax({
+            url: "/admin/maty2subjects",
+            type: "GET",
+            success: function () {
+              // If the request is successful, redirect to the mathresults page
+              window.location.href = "/admin/inputresults";
+            },
+            error: function () {
+              // Handle the error case, if needed
+            },
+          });
+        });
+      });
+
+      //FundamentalOfComputerProgramming
+      $(document).ready(function () {
+        // Attach click event handler to the button
+        $("#btnFunctionsOfSeveralVariables").click(function () {
+          // Send an AJAX request to the server
+          $.ajax({
+            url: "/admin/maty2subjects",
+            type: "GET",
+            success: function () {
+              // If the request is successful, redirect to the mathresults page
+              window.location.href = "/admin/inputresults";
+            },
+            error: function () {
+              // Handle the error case, if needed
+            },
+          });
+        });
+      });
+
+      //FundamentalOfComputerProgramming
+      $(document).ready(function () {
+        // Attach click event handler to the button
+        $("#btnPartialDifferentialEquation").click(function () {
+          // Send an AJAX request to the server
+          $.ajax({
+            url: "/admin/maty2subjects",
+            type: "GET",
+            success: function () {
+              // If the request is successful, redirect to the mathresults page
+              window.location.href = "/admin/inputresults";
+            },
+            error: function () {
+              // Handle the error case, if needed
+            },
+          });
+        });
+      });
+
+      //FundamentalOfComputerProgramming
+      $(document).ready(function () {
+        // Attach click event handler to the button
+        $("#btnBasicsOfNumberTheory").click(function () {
+          // Send an AJAX request to the server
+          $.ajax({
+            url: "/admin/maty2subjects",
+            type: "GET",
+            success: function () {
+              // If the request is successful, redirect to the mathresults page
+              window.location.href = "/admin/inputresults";
+            },
+            error: function () {
+              // Handle the error case, if needed
+            },
+          });
+        });
+      });
+
+    </script>
     <script src="assets/bootstrap/js/bootstrap.min.js"></script>
     <script src="assets/js/bs-init.js"></script>
     <script src="assets/js/theme.js"></script>
