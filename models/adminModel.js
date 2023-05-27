@@ -1,38 +1,41 @@
-const mongoose = require('mongoose');
+const mongoose = require("mongoose");
 
 const adminSchema = new mongoose.Schema({
-  // User index number
-  indexNumber: {
+  IndexNo: {
     type: String,
-    required: true
+    required: true,
   },
-  grade: {
+  Grade: {
     type: String,
-    required: true
-  },
-  // Result details
-  subjectName: {
-    type: String,
-    required: true
+    required: true,
   },
   // Result details
-  subjectStream: {
+  Semester: {
     type: String,
-    required: true
+    required: true,
   },
   // Result details
-  subjectYear: {
+  SubjectName: {
     type: String,
-    required: true
+    required: true,
   },
   // Result details
-  subjectSemester: {
+  CourseCode: {
     type: String,
-    required: true
+    required: true,
   },
-  
+  // Result details
+  Year: {
+    type: String,
+    required: true,
+  },
+  // Result details
+  Stream: {
+    type: String,
+    required: true,
+  },
 });
 
-const AdminModel = mongoose.model('AdminModel', adminSchema);
+const AdminModel1 = mongoose.model("AdminModel1", adminSchema);
 
-module.exports = AdminModel;
+module.exports = AdminModel1;

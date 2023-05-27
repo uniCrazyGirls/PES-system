@@ -1,127 +1,166 @@
-//nevigate to home page
+const User = require("../models/signupModel");
+const Admin = require("../models/adminModel");
+
+// Home page view
 const HomePageView = async (req, res, next) => {
   res.render("adminViews/adminHomePage");
 };
-//nevigate to admin settings page
+
+// Admin settings page view
 const SettingView = async (req, res, next) => {
   res.render("adminViews/adminSettings");
 };
 
-//nevigate to subject results enter page
-const SubjectResultsView = async (req, res, next) => {
-  res.render("adminViews/adminSubjectResults");
-};
-
-//nevigate to year 1 ict results page
+// Year 1 ICT results page view
 const ICT_Y1_SubjectsView = async (req, res, next) => {
   res.render("adminViews/adminICTy1_subject");
 };
 
-//nevigate to year 2 ict results page
+// Year 2 ICT results page view
 const ICT_Y2_SubjectsView = async (req, res, next) => {
   res.render("adminViews/adminICTy2_subject");
 };
 
-//nevigate to year 3 ict results page
+// Year 3 ICT results page view
 const ICT_Y3_SubjectsView = async (req, res, next) => {
   res.render("adminViews/adminICTy3_subject");
 };
 
-//nevigate to year 1 maths results page
+// Year 1 Maths results page view
 const MAT_Y1_SubjectsView = async (req, res, next) => {
   res.render("adminViews/adminMathsY1_subject");
 };
 
-//nevigate to year 2 maths results page
+// Year 2 Maths results page view
 const MAT_Y2_SubjectsView = async (req, res, next) => {
   res.render("adminViews/adminMathsY2_subject");
 };
 
-//nevigate to year 3 maths results page
+// Year 3 Maths results page view
 const MAT_Y3_SubjectsView = async (req, res, next) => {
   res.render("adminViews/adminMathsY3_subject");
 };
 
-//nevigate to year 1 physics results page
+// Year 1 Physics results page view
 const PHY_Y1_SubjectsView = async (req, res, next) => {
   res.render("adminViews/adminPhysicsY1_subject");
 };
 
-//nevigate to year 2 physics results page
+// Year 2 Physics results page view
 const PHY_Y2_SubjectsView = async (req, res, next) => {
   res.render("adminViews/adminPhysicsY2_subject");
 };
 
-//nevigate to year 3 physics results page
+// Year 3 Physics results page view
 const PHY_Y3_SubjectsView = async (req, res, next) => {
   res.render("adminViews/adminPhysicsY3_subject");
 };
+//----------------------------------------------------------------------------------------------------------
 
-//.................................................................................................
-
-//nevigate to home page
+// Home page route
 const HomePage = async (req, res, next) => {
- 
+  // Handle the request
 };
-//nevigate to admin settings page
+
+// Admin settings route
 const Setting = async (req, res, next) => {
-  
+  // Handle the request
 };
+//--------------------------------------------------------------------------------------------------------
 
-//nevigate to subject results enter page
-const SubjectResults = async (req, res, next) => {
-  
-};
-
-//nevigate to year 1 ict results page
+// Year 1 ICT results route
 const ICT_Y1_Subjects = async (req, res, next) => {
- 
-};
+  const { IndexNo, Grade, Semester, SubjectName, CourseCode, Year, Stream } =
+    req.body;
 
-//nevigate to year 2 ict results page
-const ICT_Y2_Subjects = async (req, res, next) => {
+  try {
+    // Find the user with the matching index number
+    const user = await User.findOne({ index_number: IndexNo });
 
-};
+    if (!user) {
+      return res.json({ status: "error", message: "User not found" });
+    }
 
-//nevigate to year 3 ict results page
-const ICT_Y3_Subjects = async (req, res, next) => {
- 
-};
-
-//nevigate to year 1 maths results page
-const MAT_Y1_Subjects = async (req, res, next) => {
+    if (!IndexNo || typeof first_name !== "string") {
+      return res.json({ status: "error", message: "invalied Index Number" });
+    }
   
-};
+    if (!Grade || typeof last_name !== "string") {
+      return res.json({ status: "error", message: "invalied Grade" });
+    }
 
-//nevigate to year 2 maths results page
-const MAT_Y2_Subjects = async (req, res, next) => {
+    if (!Semester || typeof first_name !== "string") {
+      return res.json({ status: "error", message: "invalied semester" });
+    }
   
+    if (!SubjectName || typeof last_name !== "string") {
+      return res.json({ status: "error", message: "invalied subject name" });
+    }
+    if (!CourseCode || typeof first_name !== "string") {
+      return res.json({ status: "error", message: "invalied course code" });
+    }
+  
+    if (!Year || typeof last_name !== "string") {
+      return res.json({ status: "error", message: "invalied Year" });
+    }
+
+    if (!Stream || typeof last_name !== "string") {
+      return res.json({ status: "error", message: "invalied Stream" });
+    }
+
+    // Append the results to the user's results array or any appropriate data structure
+    user.results.push({
+      IndexNo,
+      Grade,
+      Semester,
+      SubjectName,
+      CourseCode,
+      Year,
+      Stream,
+    });
+
+    // Save the updated user object
+    await user.save();
+
+    // Respond with a success message
+    return res.json({
+      status: "success",
+      message: "Subject added successfully",
+    });
+  } catch (error) {
+    // Handle any errors that occur during the process
+    console.error(error);
+    return res.json({ status: "error", message: "An error occurred" });
+  }
 };
 
-//nevigate to year 3 maths results page
-const MAT_Y3_Subjects = async (req, res, next) => {
- 
-};
+// Year 2 ICT results route
+const ICT_Y2_Subjects = async (req, res, next) => {};
 
-//nevigate to year 1 physics results page
-const PHY_Y1_Subjects = async (req, res, next) => {
- 
-};
+// Year 3 ICT results route
+const ICT_Y3_Subjects = async (req, res, next) => {};
 
-//nevigate to year 2 physics results page
-const PHY_Y2_Subjects = async (req, res, next) => {
- 
-};
+// Year 1 Maths results route
+const MAT_Y1_Subjects = async (req, res, next) => {};
 
-//nevigate to year 3 physics results page
-const PHY_Y3_Subjects = async (req, res, next) => {
+// Year 2 Maths results route
+const MAT_Y2_Subjects = async (req, res, next) => {};
 
-};
+// Year 3 Maths results route
+const MAT_Y3_Subjects = async (req, res, next) => {};
+
+// Year 1 Physics results route
+const PHY_Y1_Subjects = async (req, res, next) => {};
+
+// Year 2 Physics results route
+const PHY_Y2_Subjects = async (req, res, next) => {};
+
+// Year 3 Physics results route
+const PHY_Y3_Subjects = async (req, res, next) => {};
 
 module.exports = {
   HomePageView,
   SettingView,
-  SubjectResultsView,
   ICT_Y1_SubjectsView,
   ICT_Y2_SubjectsView,
   ICT_Y3_SubjectsView,
@@ -134,7 +173,6 @@ module.exports = {
 
   HomePage,
   Setting,
-  SubjectResults,
   ICT_Y1_Subjects,
   ICT_Y2_Subjects,
   ICT_Y3_Subjects,

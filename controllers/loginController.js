@@ -2,7 +2,8 @@
 const User = require("../models/signupModel");
 const bcrypt = require("bcryptjs");
 const jwt = require("jsonwebtoken");
-const JWT_SECRET ="elrkgbekrbgaskjdbgaksdjbg;aelsrjdbg;asljdgba;dslfgb;asdjfgb";
+const JWT_SECRET =
+  "elrkgbekrbgaskjdbgaksdjbg;aelsrjdbg;asljdgba;dslfgb;asdjfgb";
 const nodemailer = require("nodemailer");
 const mongoose = require("mongoose");
 
@@ -84,9 +85,7 @@ const signup = async (req, res, next) => {
     }
     throw error;
   }
-  return res.json({ status: "ok" });
 };
-
 
 //...........................................................................................
 //nevigate to login page
@@ -134,7 +133,6 @@ const login = async (req, res, next) => {
 const forgotpasswordView = async (req, res, next) => {
   res.render("forgotPassword");
 };
-
 
 //create link to enteres email
 const forgetPassword = async (req, res, next) => {
@@ -264,7 +262,7 @@ const resetPassword = async (req, res, next) => {
       { _id: id },
       { password: hashPassword }
     );
-    
+
     res.send(user);
     console.log("User updated successfully", response);
 

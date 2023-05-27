@@ -9,6 +9,10 @@ const schema = new mongoose.Schema(
     email: { type: String, required: true, unique: true },
     phone: { type: String, required: true, unique: true },
     password: { type: String, required: true },
+    results: {
+      type: Array,
+      default: [] // initialize as an empty array
+    },
 
     // Reference to AdminModel (results)
     admin: {type: mongoose.Schema.Types.ObjectId, ref: "AdminModel",},
