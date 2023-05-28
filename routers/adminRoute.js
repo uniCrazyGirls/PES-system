@@ -5,6 +5,8 @@ const bodyParser = require("body-parser");
 const {
   HomePageView,
   SettingView,
+  SubjectDetailsView,
+  LectureDetailsView,
   ICT_Y1_SubjectsView,
   ICT_Y2_SubjectsView,
   ICT_Y3_SubjectsView,
@@ -17,6 +19,8 @@ const {
 
   HomePage,
   Setting,
+  SubjectDetails,
+  LectureDetails,
   ICT_Y1_Subjects,
   ICT_Y2_Subjects,
   ICT_Y3_Subjects,
@@ -38,6 +42,9 @@ router.get("/logout", login);
 router.get("/homepage", HomePageView);
 router.get("/settings", SettingView);
 
+router.get("/subjectDetails", SubjectDetailsView);
+router.get("/lectureDetails", LectureDetailsView);
+
 router.get("/ICT/1stYear", ICT_Y1_SubjectsView);
 router.get("/ICT/2stYear", ICT_Y2_SubjectsView);
 router.get("/ICT/3stYear", ICT_Y3_SubjectsView);
@@ -52,6 +59,8 @@ router.get("/Physics/3stYear", PHY_Y3_SubjectsView);
 
 router.post("/homepage", HomePage);
 router.post("/settings", Setting);
+router.get("/subjectDetails", SubjectDetails);
+router.get("/lectureDetails", LectureDetails);
 
 router.post("/ICT/1stYear", ICT_Y1_Subjects);
 router.post("/ICT/2stYear", ICT_Y2_Subjects);

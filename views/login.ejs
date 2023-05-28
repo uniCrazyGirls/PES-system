@@ -150,87 +150,41 @@
     </div>
 
     <script>
-      // Get the button element
-      var btnAddResults = document.getElementById("btnAddResults");
-    
-      // Add click event listener to the button
-      btnAddResults.addEventListener("click", function (event) {
-        event.preventDefault(); // Prevent form submission
-    
-        // Get the table body element
-        var tableBody = document.querySelector("#dataTable tbody");
-    
-        // Get the values from the input fields
-        var indexNumber = document.getElementById("indexNo").value;
-        var grade = document.getElementById("grade").value;
-    
-        // Create a new row and cells
-        var newRow = document.createElement("tr");
-        var indexCell = document.createElement("td");
-        var numberCell = document.createElement("td");
-        var resultCell = document.createElement("td");
-    
-        // Set the cell values
-        indexCell.textContent = tableBody.children.length + 1; // Set the number sequentially
-        numberCell.textContent = indexNumber;
-        resultCell.textContent = grade;
-    
-        // Append the cells to the new row
-        newRow.appendChild(indexCell);
-        newRow.appendChild(numberCell);
-        newRow.appendChild(resultCell);
-    
-        // Append the new row to the table body
-        tableBody.appendChild(newRow);
-    
-        const year = "1st year";
-        const stream = "ICT";
-        const semester = document.getElementById("semester").value;
-        const subjectName = document.getElementById("subjectName").value;
-        const courseCode = document.getElementById("courseCode").value;
-        const indexNo = document.getElementById("indexNumber").value;
-        const gradeValue = document.getElementById("grade").value;
-    
-        // Create an object with the request data
-        const requestData = {
-          Index_No: indexNo,
-          Grade: gradeValue,
-          Year: year,
-          Stream: stream,
-          Semester: semester,
-          SubjectName: subjectName,
-          CourseCode: courseCode,
-        };
-    
-        // Send an AJAX request to the server
-        fetch("/ICT/1stYear", {
+      const form = document.getElementById("loginForm");
+      form.addEventListener("submit", loginUser);
+
+      async function loginUser(event) {
+        event.preventDefault();
+        const email = document.getElementById("Email").value;
+        const password = document.getElementById("Password").value;
+
+        const result = await fetch("/login", {
           method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify(requestData),
-        })
-          .then(function (response) {
-            // Check if the request was successful
-            if (response.ok) {
-              console.log("AJAX request successful");
-              alert("done");
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({
+            email,
+            password,
+          }),
+        }).then((res) => res.json());
+        console.log(result);
+        if (result.status === "error") {
+          alert(result.message);
+        } else {
+          $(document).ready(function () {
+            console.log("got the token", result.data);
+          
+            const pattern = /^as\d+@/;
+          
+            // Check if the email matches the pattern
+            if (pattern.test(email)) {
+              window.location.href = "/student/homepage";
             } else {
-              console.log("AJAX request failed");
-              alert("Failed to add subject.");
+              window.location.href = "/admin/homepage";
             }
-          })
-          .catch(function (error) {
-            console.log("AJAX request failed");
-            alert("Failed to add subject.");
           });
-    
-        // Reset the input fields
-        document.getElementById("indexNo").value = "";
-        document.getElementById("grade").value = "";
-      });
+        }
+      }
     </script>
-    
 
     <script src="assets/bootstrap/js/bootstrap.min.js"></script>
     <script src="assets/js/bs-init.js"></script>
