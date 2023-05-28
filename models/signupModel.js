@@ -13,9 +13,6 @@ const schema = new mongoose.Schema(
       type: Array,
       default: [] // initialize as an empty array
     },
-
-    // Reference to AdminModel (results)
-    admin: {type: mongoose.Schema.Types.ObjectId, ref: "AdminModel",},
   },
   { collection: "users" }
 );
