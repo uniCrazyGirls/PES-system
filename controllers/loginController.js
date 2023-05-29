@@ -1,20 +1,17 @@
-//connect to mongodb
+// Connect to MongoDB
 const User = require("../models/signupModel");
 const bcrypt = require("bcryptjs");
 const jwt = require("jsonwebtoken");
-const JWT_SECRET =
-  "elrkgbekrbgaskjdbgaksdjbg;aelsrjdbg;asljdgba;dslfgb;asdjfgb";
+const JWT_SECRET = "IMALSHA";
 const nodemailer = require("nodemailer");
 const mongoose = require("mongoose");
 
-//................................................................................
-//nevigate to signup page
+// Navigate to signup page
 const signupView = async (req, res, next) => {
   res.render("signup");
 };
 
-//................................................................................
-//create the user and store the data in database
+// Create the user and store the data in the database
 const signup = async (req, res, next) => {
   const {
     first_name,
@@ -34,36 +31,31 @@ const signup = async (req, res, next) => {
   if (plainTextPasswordA.length < 8) {
     return res.json({
       status: "error",
-      message:
-        "Passwords length is too small.It should be al least 8 charactters",
+      message: "Password length is too short. It should be at least 8 characters",
     });
   }
 
   if (phone.length < 10) {
     return res.json({
       status: "error",
-      message:
-        "Phone number length is too small.It should be al least 10 charactters",
+      message: "Phone number length is too short. It should be at least 10 characters",
     });
   }
 
   if (!first_name || typeof first_name !== "string") {
-    return res.json({ status: "error", message: "invalied first name" });
+    return res.json({ status: "error", message: "Invalid first name" });
   }
 
   if (!last_name || typeof last_name !== "string") {
-    return res.json({ status: "error", message: "invalied last name" });
+    return res.json({ status: "error", message: "Invalid last name" });
   }
 
   if (!registration_number || typeof registration_number !== "string") {
-    return res.json({
-      status: "error",
-      message: "invalied registration number",
-    });
+    return res.json({ status: "error", message: "Invalid registration number" });
   }
 
   if (!index_number || typeof index_number !== "string") {
-    return res.json({ status: "error", message: "invalied index number" });
+    return res.json({ status: "error", message: "Invalid index number" });
   }
 
   const hashPassword1 = await bcrypt.hash(plainTextPasswordA, 10);
@@ -81,19 +73,18 @@ const signup = async (req, res, next) => {
     console.log("User created successfully", response);
   } catch (error) {
     if (error.code === 11000) {
-      return res.json({ status: "error", message: "Username Already in use" });
+      return res.json({ status: "error", message: "Username already in use" });
     }
     throw error;
   }
 };
 
-//...........................................................................................
-//nevigate to login page
+// Navigate to login page
 const loginView = async (req, res, next) => {
   res.render("login");
 };
 
-//login to the user account using JWT
+// Login to the user account using JWT
 const login = async (req, res, next) => {
   const { email, password } = req.body;
 
@@ -102,7 +93,7 @@ const login = async (req, res, next) => {
   if (!user) {
     return res.json({
       status: "error",
-      message: "Invalid username or password",
+      message: "Invalid email or password",
     });
   }
 
@@ -113,28 +104,28 @@ const login = async (req, res, next) => {
     });
   }
 
-  if (await bcrypt.compareSync(password, user.password)) {
-    // Username password combination is successful
-    const token = jwt.sign(
-      {
-        id: user.id,
-        username: user.email,
-      },
-      JWT_SECRET
-    );
+  if (await bcrypt.compare(password, user.password)) {
+    // Username-password combination is successful
+    const payload = user;
+
+    const token = jwt.sign(payload, JWT_SECRET);
+    
+    res.cookie("token", token, {
+      httpOnly: true,
+    });
+
     return res.json({ status: "ok", data: token });
   }
 
-  res.json({ status: "error", message: "Invalid username or password" });
+  res.json({ status: "error", message: "Invalid email or password" });
 };
 
-//................................................................................................
-//nevigate to forget password page
+// Navigate to forgot password page
 const forgotpasswordView = async (req, res, next) => {
   res.render("forgotPassword");
 };
 
-//create link to enteres email
+// Create link to entered email
 const forgetPassword = async (req, res, next) => {
   const { email } = req.body;
 
@@ -144,17 +135,14 @@ const forgetPassword = async (req, res, next) => {
     if (!user) {
       return res.json({
         status: "error",
-        message: "Invalid E-Mail",
+        message: "Invalid email",
       });
     }
 
     const secret = JWT_SECRET + user.password;
 
-    //create one time link and valied for 15 minuits
-    const payload = {
-      email: user.email,
-      id: user._id,
-    };
+    // Create one-time link valid for 15 minutes
+    const payload = user;
 
     const token = jwt.sign(payload, secret, { expiresIn: "15m" });
     const link = `http://localhost:8000/resetpassword/${user._id}/${token}`;
@@ -205,7 +193,6 @@ const forgetPassword = async (req, res, next) => {
     });
   }
 };
-//..........................................................................................
 
 // Navigate to reset password page
 const resetpasswordView = async (req, res, next) => {
@@ -251,8 +238,7 @@ const resetPassword = async (req, res, next) => {
     if (password1.length < 8) {
       return res.json({
         status: "error",
-        message:
-          "Password length is too short. It should be at least 8 characters",
+        message: "Password length is too short. It should be at least 8 characters",
       });
     }
 
