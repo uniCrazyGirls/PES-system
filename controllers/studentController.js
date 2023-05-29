@@ -4,19 +4,12 @@ const Results_y2_s1 = [];
 const Results_y2_s2 = [];
 const Results_y3_s1 = [];
 const Results_y3_s2 = [];
-// Array to store the subject credit values
 const subjectCredits = [];
-// Array to store the subject result values
 const subjectResults = [];
-// Array to store the subject GPAs
 const subjectGPAs = [];
-// Array to store the full GPA
 const ICTGPA = [];
-
 const MATGPA = [];
-
 const PHYGPA = [];
-
 const fullGPA = [];
 // Function to clear the result arrays
 const clearResultArrays = () => {
@@ -426,7 +419,31 @@ const CompleteResultSheet = async (req, res, next) => {
     // Loop through the user's results
     for (const result of user.results) {
       const subjectResult = result.Grade;
-      const resultState = subjectResult >= "C" ? "Pass" : "Repeat";
+
+      let resultState;
+      if (
+        subjectResult === "A+" ||
+        subjectResult === "A" ||
+        subjectResult === "A-" ||
+        subjectResult === "B+" ||
+        subjectResult === "B" ||
+        subjectResult === "B-" ||
+        subjectResult === "C+" ||
+        subjectResult === "C"
+      ) {
+        resultState = "Pass";
+      } else if (
+        subjectResult === "E" ||
+        subjectResult === "D-" ||
+        subjectResult === "D" ||
+        subjectResult === "D+" ||
+        subjectResult === "C-"
+      ) {
+        resultState = "Repeat";
+      } else {
+        // Handle other cases if needed
+        console.log("result is not valied")
+      }
 
       const subjectKey = result.CourseCode + result.SubjectName; // Create a unique key using subject code and name
 
@@ -504,7 +521,31 @@ const ICTResults = async (req, res, next) => {
     for (const result of user.results) {
       if (result.Stream === "Information and Communication Technology") {
         const subjectResult = result.Grade;
-        const resultState = subjectResult >= "C" ? "Pass" : "Repeat";
+
+        let resultState;
+      if (
+        subjectResult === "A+" ||
+        subjectResult === "A" ||
+        subjectResult === "A-" ||
+        subjectResult === "B+" ||
+        subjectResult === "B" ||
+        subjectResult === "B-" ||
+        subjectResult === "C+" ||
+        subjectResult === "C"
+      ) {
+        resultState = "Pass";
+      } else if (
+        subjectResult === "E" ||
+        subjectResult === "D-" ||
+        subjectResult === "D" ||
+        subjectResult === "D+" ||
+        subjectResult === "C-"
+      ) {
+        resultState = "Repeat";
+      } else {
+        // Handle other cases if needed
+        console.log("result is not valied")
+      }
 
         const subjectKey = result.CourseCode + result.SubjectName; // Create a unique key using subject code and name
 
@@ -583,7 +624,31 @@ const MathResults = async (req, res, next) => {
     for (const result of user.results) {
       if (result.Stream === "Mathamatics") {
         const subjectResult = result.Grade;
-        const resultState = subjectResult >= "C" ? "Pass" : "Repeat";
+        
+        let resultState;
+      if (
+        subjectResult === "A+" ||
+        subjectResult === "A" ||
+        subjectResult === "A-" ||
+        subjectResult === "B+" ||
+        subjectResult === "B" ||
+        subjectResult === "B-" ||
+        subjectResult === "C+" ||
+        subjectResult === "C"
+      ) {
+        resultState = "Pass";
+      } else if (
+        subjectResult === "E" ||
+        subjectResult === "D-" ||
+        subjectResult === "D" ||
+        subjectResult === "D+" ||
+        subjectResult === "C-"
+      ) {
+        resultState = "Repeat";
+      } else {
+        // Handle other cases if needed
+        console.log("result is not valied")
+      }
 
         const subjectKey = result.CourseCode + result.SubjectName; // Create a unique key using subject code and name
 
@@ -662,7 +727,31 @@ const PhysicsResults = async (req, res, next) => {
     for (const result of user.results) {
       if (result.Stream === "Physics") {
         const subjectResult = result.Grade;
-        const resultState = subjectResult >= "C" ? "Pass" : "Repeat";
+        
+        let resultState;
+      if (
+        subjectResult === "A+" ||
+        subjectResult === "A" ||
+        subjectResult === "A-" ||
+        subjectResult === "B+" ||
+        subjectResult === "B" ||
+        subjectResult === "B-" ||
+        subjectResult === "C+" ||
+        subjectResult === "C"
+      ) {
+        resultState = "Pass";
+      } else if (
+        subjectResult === "E" ||
+        subjectResult === "D-" ||
+        subjectResult === "D" ||
+        subjectResult === "D+" ||
+        subjectResult === "C-"
+      ) {
+        resultState = "Repeat";
+      } else {
+        // Handle other cases if needed
+        console.log("result is not valied")
+      }
 
         const subjectKey = result.CourseCode + result.SubjectName; // Create a unique key using subject code and name
 

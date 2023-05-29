@@ -1,0 +1,1464 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, shrink-to-fit=no"
+    />
+    <title>Final Project</title>
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i&amp;display=swap"
+    />
+    <link rel="stylesheet" href="assets/fonts/fontawesome-all.min.css" />
+    <link rel="stylesheet" href="assets/css/untitled.css" />
+  </head>
+
+  <body>
+    <div id="wrapper">
+      <div class="d-flex flex-column" id="content-wrapper">
+        <div id="content">
+            <nav
+            class="navbar navbar-light navbar-expand fixed-top bg-white shadow mb-4 topbar static-top"
+          >
+            <div class="container-fluid">
+              <ul class="navbar-nav">
+                <li class="nav-item">
+                  <a
+                    class="btn btn-primary"
+                    role="button"
+                    style="background: #871808; border-width: 0px"
+                    href="http://localhost:8000/student/homepage"
+                    ><i class="fas fa-home"></i
+                  ></a>
+                </li>
+              </ul>
+              <form
+                class="d-none d-sm-inline-block me-auto ms-md-3 my-2 my-md-0 mw-100 navbar-search"
+              >
+                <div class="input-group" style="background: #871808">
+                  <input
+                    class="bg-light border rounded-0 form-control border-0 small"
+                    type="text"
+                    placeholder="Search for ..."
+                  /><button
+                    class="btn btn-primary py-0"
+                    type="button"
+                    style="background: #871808; border-width: 0px"
+                  >
+                    <i class="fas fa-search"></i>
+                  </button>
+                </div>
+              </form>
+              <ul class="navbar-nav flex-nowrap ms-auto">
+                <li class="nav-item dropdown d-sm-none no-arrow">
+                  <a
+                    class="dropdown-toggle nav-link"
+                    aria-expanded="false"
+                    data-bs-toggle="dropdown"
+                    href="#"
+                    ><i class="fas fa-search"></i
+                  ></a>
+                  <div
+                    class="dropdown-menu dropdown-menu-end p-3 animated--grow-in"
+                    aria-labelledby="searchDropdown"
+                  >
+                    <form class="me-auto navbar-search w-100">
+                      <div class="input-group">
+                        <input
+                          class="bg-light form-control border-0 small"
+                          type="text"
+                          placeholder="Search for ..."
+                        />
+                        <div class="input-group-append">
+                          <button class="btn btn-primary py-0" type="button">
+                            <i class="fas fa-search"></i>
+                          </button>
+                        </div>
+                      </div>
+                    </form>
+                  </div>
+                </li>
+                <li class="nav-item dropdown no-arrow mx-1"></li>
+                <li class="nav-item dropdown no-arrow mx-1">
+                  <div
+                    class="shadow dropdown-list dropdown-menu dropdown-menu-end"
+                    aria-labelledby="alertsDropdown"
+                  ></div>
+                </li>
+                <li class="nav-item dropdown no-arrow">
+                  <div class="nav-item dropdown no-arrow">
+                    <a
+                      class="dropdown-toggle nav-link"
+                      aria-expanded="false"
+                      data-bs-toggle="dropdown"
+                      href="#"
+                      ><span class="d-none d-lg-inline me-2 text-gray-600 small"
+                        >Imalsha Rathnayake</span
+                      ><img
+                        class="border rounded-circle img-profile"
+                        src="assets/img/avatars/avatar1.jpeg"
+                    /></a>
+                    <div
+                      class="dropdown-menu shadow dropdown-menu-end animated--grow-in"
+                    >
+                    <a class="dropdown-item" href="http://localhost:8000/student/settings">
+                        <i class="fas fa-cogs fa-sm fa-fw me-2 text-gray-400"></i>
+                        &nbsp;Profile Settings
+                    </a>
+                    <div class="dropdown-divider"></div>
+
+                    <a class="dropdown-item" href="http://localhost:8000/login">
+                        <i class="fas fa-sign-out-alt fa-sm fa-fw me-2 text-gray-400"></i>
+                        &nbsp;Logout
+                    </a>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </nav>
+          <div class="container-fluid">
+            <div class="card shadow">
+              <div class="card-header py-3">
+                <div
+                  class="btn-group"
+                  role="group"
+                  style="background: #871808"
+                ></div>
+              </div>
+              <div class="card-header py-3 mt-3">
+                <div></div>
+                <h6 style="width: 1101px; font-size: 25px">
+                  INFORMATION &amp; COMMUNICATION TECHNOLOGY
+                </h6>
+              </div>
+              <div class="card-body">
+                <h4>1ST YEAR</h4>
+                <h5 style="width: 2000px; font-size: 20px">
+                  &nbsp; First Semester
+                </h5>
+                <div
+                  class="table-responsive table mt-2"
+                  id="dataTable-1"
+                  role="grid"
+                  aria-describedby="dataTable_info"
+                >
+                  <table class="table my-0" id="dataTable">
+                    <thead>
+                      <tr>
+                        <th>Subject Code</th>
+                        <th>Subject Name</th>
+                        <th>Course Type</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td style="width: 370px">
+                          <h6>ICT 105 1.5</h6>
+                        </td>
+                        <td style="width: 760px">
+                          <h6>Computer Architecture</h6>
+                        </td>
+                        <td>
+                          <h6>Core</h6>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <h6>ICT 106 1.5</h6>
+                        </td>
+                        <td>
+                          <h6>Fundamentals Of Computer Programming&nbsp;</h6>
+                        </td>
+                        <td>
+                          <h6>Core</h6>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <h6>ICT 107 1.0</h6>
+                        </td>
+                        <td>
+                          <h6>Computer Programming Laboratory I</h6>
+                        </td>
+                        <td>
+                          <h6>Core</h6>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <h6>ICT 108 1.0</h6>
+                        </td>
+                        <td>
+                          <h6>Software Engineering I</h6>
+                        </td>
+                        <td>
+                          <h6>Core</h6>
+                        </td>
+                      </tr>
+                    </tbody>
+                    <tfoot>
+                      <tr style="padding-top: 101px"></tr>
+                    </tfoot>
+                  </table>
+                </div>
+              </div>
+              <div class="card-body">
+                <h5 style="width: 2000px; font-size: 20px">
+                  &nbsp; Second Semester
+                </h5>
+                <div
+                  class="table-responsive table mt-2"
+                  id="dataTable-2"
+                  role="grid"
+                  aria-describedby="dataTable_info"
+                >
+                  <table class="table my-0" id="dataTable">
+                    <thead>
+                      <tr>
+                        <th>Subject Code</th>
+                        <th style="width: 760px">Subject Name</th>
+                        <th>Course Type</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td style="width: 370px">
+                          <h6>ICT 129 2.0</h6>
+                        </td>
+                        <td>
+                          <h6>
+                            Object Oriented Programming&nbsp; &nbsp; &nbsp;
+                            &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+                            &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+                            &nbsp;&nbsp;
+                          </h6>
+                        </td>
+                        <td>
+                          <h6>Core</h6>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <h6>ICT 130 1.0</h6>
+                        </td>
+                        <td>
+                          <h6>
+                            Computer Programming Laboratory II&nbsp; &nbsp;
+                            &nbsp; &nbsp; &nbsp;
+                          </h6>
+                        </td>
+                        <td>
+                          <h6>Core</h6>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <h6>ICT 131 2.0</h6>
+                        </td>
+                        <td>
+                          <h6>Software Engineering II</h6>
+                        </td>
+                        <td>
+                          <h6>Core</h6>
+                        </td>
+                      </tr>
+                    </tbody>
+                    <tfoot>
+                      <tr style="padding-top: 101px"></tr>
+                    </tfoot>
+                  </table>
+                </div>
+              </div>
+              <div class="card-body">
+                <h4>2ND YEAR</h4>
+                <h5 style="width: 2000px; font-size: 20px">
+                  &nbsp; First Semester
+                </h5>
+                <div
+                  class="table-responsive table mt-2"
+                  id="dataTable-3"
+                  role="grid"
+                  aria-describedby="dataTable_info"
+                >
+                  <table class="table my-0" id="dataTable">
+                    <thead>
+                      <tr>
+                        <th>Subject Code</th>
+                        <th>Subject Name</th>
+                        <th>Course Type</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td style="width: 370px">
+                          <h6>ICT 204 2.0</h6>
+                        </td>
+                        <td style="width: 760px">
+                          <h6>
+                            Data Structures And Algorithms&nbsp; &nbsp; &nbsp;
+                            &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+                            &nbsp;&nbsp;
+                          </h6>
+                        </td>
+                        <td>
+                          <h6>Core</h6>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <h6>ICT 205 1.5</h6>
+                        </td>
+                        <td>
+                          <h6>Operating System</h6>
+                        </td>
+                        <td>
+                          <h6>Core</h6>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <h6>ICT 206 1.5</h6>
+                        </td>
+                        <td>
+                          <h6>Database &amp; System Administration</h6>
+                        </td>
+                        <td>
+                          <h6>Core</h6>
+                        </td>
+                      </tr>
+                    </tbody>
+                    <tfoot>
+                      <tr style="padding-top: 101px"></tr>
+                    </tfoot>
+                  </table>
+                </div>
+              </div>
+              <div class="card-body">
+                <h5 style="width: 2000px; font-size: 20px">
+                  &nbsp; Second Semester
+                </h5>
+                <div
+                  class="table-responsive table mt-2"
+                  id="dataTable-4"
+                  role="grid"
+                  aria-describedby="dataTable_info"
+                >
+                  <table class="table my-0" id="dataTable">
+                    <thead>
+                      <tr>
+                        <th style="width: 270px">Subject Code</th>
+                        <th>Subject Name</th>
+                        <th>Course Type</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td style="width: 370px">
+                          <h6>ICT 229 2.0</h6>
+                        </td>
+                        <td style="width: 760px">
+                          <h6>User Interface Design &amp; Implementation</h6>
+                        </td>
+                        <td>
+                          <h6>Core</h6>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <h6>ICT 230 1.5</h6>
+                        </td>
+                        <td>
+                          <h6>Computer Network &amp; System Administration</h6>
+                        </td>
+                        <td>
+                          <h6>Core</h6>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <h6>ICT 231 1.5</h6>
+                        </td>
+                        <td>
+                          <h6>Visual Computing&nbsp;</h6>
+                        </td>
+                        <td>
+                          <h6>Core</h6>
+                        </td>
+                      </tr>
+                    </tbody>
+                    <tfoot>
+                      <tr style="padding-top: 101px"></tr>
+                    </tfoot>
+                  </table>
+                </div>
+              </div>
+              <div class="card-body">
+                <h4>3RD YEAR</h4>
+                <h5 style="width: 2000px; font-size: 20px">
+                  &nbsp; First Semester
+                </h5>
+                <div
+                  class="table-responsive table mt-2"
+                  id="dataTable-5"
+                  role="grid"
+                  aria-describedby="dataTable_info"
+                >
+                  <table class="table my-0" id="dataTable">
+                    <thead>
+                      <tr>
+                        <th>Subject Code</th>
+                        <th style="width: 760px">Subject Name</th>
+                        <th>Course Type</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td style="width: 370px">
+                          <h6>
+                            ICT 304 1.5&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+                            &nbsp;&nbsp;
+                          </h6>
+                        </td>
+                        <td>
+                          <h6>
+                            Multimedia Technologies&nbsp; &nbsp; &nbsp; &nbsp;
+                            &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+                            &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+                            &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+                            &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+                          </h6>
+                        </td>
+                        <td>
+                          <h6>Core</h6>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <h6>ICT 305 2.0</h6>
+                        </td>
+                        <td>
+                          <h6>Embedded System</h6>
+                        </td>
+                        <td>
+                          <h6>Core</h6>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <h6>ICT 306 1.5</h6>
+                        </td>
+                        <td>
+                          <h6>
+                            Mobile Technologies &amp; Application Development
+                          </h6>
+                        </td>
+                        <td>
+                          <h6>Optional</h6>
+                        </td>
+                        <td></td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <h6>ICT 307 2.0</h6>
+                        </td>
+                        <td>
+                          <h6>Introduction To Artificial Intelligence</h6>
+                        </td>
+                        <td>
+                          <h6>Optional</h6>
+                        </td>
+                        <td></td>
+                      </tr>
+                    </tbody>
+                    <tfoot>
+                      <tr style="padding-top: 101px"></tr>
+                    </tfoot>
+                  </table>
+                </div>
+              </div>
+              <div class="card-body">
+                <h5 style="width: 2000px; font-size: 20px">
+                  &nbsp; Second Semester
+                </h5>
+                <div
+                  class="table-responsive table mt-2"
+                  id="dataTable-6"
+                  role="grid"
+                  aria-describedby="dataTable_info"
+                >
+                  <table class="table my-0" id="dataTable">
+                    <thead>
+                      <tr>
+                        <th style="width: 270px">Subject Code</th>
+                        <th>Subject Name</th>
+                        <th>Course Type</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td style="width: 370px">
+                          <h6>ICT 330 2.0</h6>
+                        </td>
+                        <td style="width: 760px">
+                          <h6>
+                            Software Architecture &amp; Design&nbsp; &nbsp;
+                            &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+                          </h6>
+                        </td>
+                        <td>
+                          <h6>Core</h6>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <h6>ICT 331 1.5</h6>
+                        </td>
+                        <td>
+                          <h6>Software Quality Assurance</h6>
+                        </td>
+                        <td>
+                          <h6>Core</h6>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <h6>ICT 332 1.5</h6>
+                        </td>
+                        <td>
+                          <h6>Human Computer Interaction</h6>
+                        </td>
+                        <td>
+                          <h6>Optional</h6>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <h6>ICT 333 1.5</h6>
+                        </td>
+                        <td>
+                          <h6>Data Mining &amp; Warehousing</h6>
+                        </td>
+                        <td>
+                          <h6>Optional</h6>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <h6>ICT 334 2.0</h6>
+                        </td>
+                        <td>
+                          <h6>Project ( Individual / Group )</h6>
+                        </td>
+                        <td>
+                          <h6>Optional</h6>
+                        </td>
+                      </tr>
+                    </tbody>
+                    <tfoot>
+                      <tr style="padding-top: 101px"></tr>
+                    </tfoot>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="container-fluid">
+            <div class="card shadow">
+              <div class="card-header py-3 mt-3">
+                <div></div>
+                <h6 style="width: 1101px; font-size: 25px">Mathematics</h6>
+              </div>
+              <div class="card-body">
+                <h4>1ST YEAR</h4>
+                <h5 style="width: 2000px; font-size: 20px">
+                  &nbsp; First Semester
+                </h5>
+                <div
+                  class="table-responsive table mt-2"
+                  id="dataTable-7"
+                  role="grid"
+                  aria-describedby="dataTable_info"
+                >
+                  <table class="table my-0" id="dataTable">
+                    <thead>
+                      <tr>
+                        <th>Subject Code</th>
+                        <th>Subject Name</th>
+                        <th>Course Type</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td style="width: 370px">
+                          <h6>MAT 113 1.0</h6>
+                        </td>
+                        <td style="width: 760px">
+                          <h6>Complex Numbers And Vectors</h6>
+                        </td>
+                        <td>
+                          <h6>Core</h6>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <h6>MAT 112 2.0</h6>
+                        </td>
+                        <td>
+                          <h6>Differential Equation</h6>
+                        </td>
+                        <td>
+                          <h6>Core</h6>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <h6>MAT 111 2.0</h6>
+                        </td>
+                        <td>
+                          <h6>Fundamentals Of Logic And Set Theory</h6>
+                        </td>
+                        <td>
+                          <h6>Core</h6>
+                        </td>
+                      </tr>
+                    </tbody>
+                    <tfoot>
+                      <tr style="padding-top: 101px"></tr>
+                    </tfoot>
+                  </table>
+                </div>
+              </div>
+              <div class="card-body">
+                <h5 style="width: 2000px; font-size: 20px">
+                  &nbsp; Second Semester
+                </h5>
+                <div
+                  class="table-responsive table mt-2"
+                  id="dataTable-8"
+                  role="grid"
+                  aria-describedby="dataTable_info"
+                >
+                  <table class="table my-0" id="dataTable">
+                    <thead>
+                      <tr>
+                        <th>Subject Code</th>
+                        <th>Subject Name</th>
+                        <th>Course Type</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td style="width: 370px">
+                          <h6>MAT 121 2.0</h6>
+                        </td>
+                        <td style="width: 759px">
+                          <h6>Linear Algebra I</h6>
+                        </td>
+                        <td>
+                          <h6>Core</h6>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <h6>MAT 122 2.0</h6>
+                        </td>
+                        <td>
+                          <h6>Calculus</h6>
+                        </td>
+                        <td>
+                          <h6>Core</h6>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <h6>MAT 123 1.0</h6>
+                        </td>
+                        <td>
+                          <h6>
+                            Vector Calculus&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+                            &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+                            &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+                            &nbsp; &nbsp;
+                          </h6>
+                        </td>
+                        <td>
+                          <h6>Core</h6>
+                        </td>
+                      </tr>
+                    </tbody>
+                    <tfoot>
+                      <tr style="padding-top: 101px"></tr>
+                    </tfoot>
+                  </table>
+                </div>
+              </div>
+              <div class="card-body">
+                <h4>2ND YEAR</h4>
+                <h5 style="width: 2000px; font-size: 20px">
+                  &nbsp; First Semester
+                </h5>
+                <div
+                  class="table-responsive table mt-2"
+                  id="dataTable-9"
+                  role="grid"
+                  aria-describedby="dataTable_info"
+                >
+                  <table class="table my-0" id="dataTable">
+                    <thead>
+                      <tr>
+                        <th>Subject Code</th>
+                        <th>Subject Name</th>
+                        <th>Course type</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td style="width: 370px">
+                          <h6>MAT 211 1.0</h6>
+                        </td>
+                        <td style="width: 760px">
+                          <h6>Linear Algebra II</h6>
+                        </td>
+                        <td>
+                          <h6>Core</h6>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <h6>MAT 212 2.0</h6>
+                        </td>
+                        <td>
+                          <h6>Real Analysis I</h6>
+                        </td>
+                        <td>
+                          <h6>Core</h6>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <h6>MAT 213 2.0</h6>
+                        </td>
+                        <td>
+                          <h6>
+                            Numerical Methods&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+                            &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+                            &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;
+                          </h6>
+                        </td>
+                        <td>
+                          <h6>Core</h6>
+                        </td>
+                      </tr>
+                    </tbody>
+                    <tfoot>
+                      <tr style="padding-top: 101px"></tr>
+                    </tfoot>
+                  </table>
+                </div>
+              </div>
+              <div class="card-body">
+                <h5 style="width: 2000px; font-size: 20px">
+                  &nbsp; Second Semester
+                </h5>
+                <div
+                  class="table-responsive table mt-2"
+                  id="dataTable-10"
+                  role="grid"
+                  aria-describedby="dataTable_info"
+                >
+                  <table class="table my-0" id="dataTable">
+                    <thead>
+                      <tr>
+                        <th>Subject Code</th>
+                        <th>Subject Name</th>
+                        <th>Course Type</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td style="width: 370px">
+                          <h6>MAT 221 2.0</h6>
+                        </td>
+                        <td style="width: 760px">
+                          <h6>Functions Of Several Variables</h6>
+                        </td>
+                        <td>
+                          <h6>Core</h6>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <h6>MAT 222 2.0</h6>
+                        </td>
+                        <td>
+                          <h6>Partial Differential Equation</h6>
+                        </td>
+                        <td>
+                          <h6>Core</h6>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <h6>MAT 223 1.0</h6>
+                        </td>
+                        <td>
+                          <h6>
+                            Basics Of Number theory&nbsp; &nbsp; &nbsp; &nbsp;
+                            &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+                            &nbsp;
+                          </h6>
+                        </td>
+                        <td>
+                          <h6>Core</h6>
+                        </td>
+                      </tr>
+                    </tbody>
+                    <tfoot>
+                      <tr style="padding-top: 101px"></tr>
+                    </tfoot>
+                  </table>
+                </div>
+              </div>
+              <div class="card-body">
+                <h4>3RD YEAR</h4>
+                <h5 style="width: 2000px; font-size: 20px">
+                  &nbsp; First Semester
+                </h5>
+                <div
+                  class="table-responsive table mt-2"
+                  id="dataTable-11"
+                  role="grid"
+                  aria-describedby="dataTable_info"
+                >
+                  <table class="table my-0" id="dataTable">
+                    <thead>
+                      <tr>
+                        <th>Subject Code</th>
+                        <th>Subject Name</th>
+                        <th>Subject Type</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td style="width: 370px">
+                          <h6>MAT 311 2.0</h6>
+                        </td>
+                        <td style="width: 760px">
+                          <h6>Complex Analysis</h6>
+                        </td>
+                        <td>
+                          <h6>Core</h6>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <h6>MAT 312 2.0</h6>
+                        </td>
+                        <td>
+                          <h6>Computer Programming</h6>
+                        </td>
+                        <td>
+                          <h6>Optional</h6>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <h6>MAT 313 1.0</h6>
+                        </td>
+                        <td>
+                          <h6>Introduction To History Of Mathematics</h6>
+                        </td>
+                        <td>
+                          <h6>Core</h6>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <h6>MAT 315 2.0</h6>
+                        </td>
+                        <td>
+                          <h6>Boolean Algebra &amp; Switching Circuits</h6>
+                        </td>
+                        <td>
+                          <h6>Optional</h6>
+                        </td>
+                      </tr>
+                    </tbody>
+                    <tfoot>
+                      <tr style="padding-top: 101px"></tr>
+                    </tfoot>
+                  </table>
+                </div>
+              </div>
+              <div class="card-body">
+                <h5 style="width: 2000px; font-size: 20px">
+                  &nbsp; Second Semester
+                </h5>
+                <div
+                  class="table-responsive table mt-2"
+                  id="dataTable-12"
+                  role="grid"
+                  aria-describedby="dataTable_info"
+                >
+                  <table class="table my-0" id="dataTable">
+                    <thead>
+                      <tr>
+                        <th>Subject Code</th>
+                        <th>Subject Name</th>
+                        <th>Course Type</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td style="width: 370px">
+                          <h6>MAT 321 2.0</h6>
+                        </td>
+                        <td style="width: 760px">
+                          <h6>
+                            Abstract Algebra&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+                            &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+                            &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+                            &nbsp;&nbsp;
+                          </h6>
+                        </td>
+                        <td>
+                          <h6>Core</h6>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <h6>MAT 322 2.0</h6>
+                        </td>
+                        <td>
+                          <h6>Differential Geometry</h6>
+                        </td>
+                        <td>
+                          <h6>Core</h6>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <h6>MAT 323 1.0</h6>
+                        </td>
+                        <td>
+                          <h6>Optimization</h6>
+                        </td>
+                        <td>
+                          <h6>Optional</h6>
+                        </td>
+                      </tr>
+                    </tbody>
+                    <tfoot>
+                      <tr style="padding-top: 101px"></tr>
+                    </tfoot>
+                  </table>
+                </div>
+              </div>
+            </div>
+            <div class="card shadow">
+              <div class="card-header py-3 mt-3">
+                <div></div>
+                <h6 style="width: 1101px; font-size: 25px">PHYSICS</h6>
+              </div>
+              <div class="card-body">
+                <h4>1ST YEAR</h4>
+                <h5 style="width: 2000px; font-size: 20px">
+                  &nbsp; First Semester
+                </h5>
+                <div
+                  class="table-responsive table mt-2"
+                  id="dataTable-13"
+                  role="grid"
+                  aria-describedby="dataTable_info"
+                >
+                  <table class="table my-0" id="dataTable">
+                    <thead>
+                      <tr>
+                        <th>Subject Code</th>
+                        <th>Subject Name</th>
+                        <th>Course Type</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td style="width: 370px">
+                          <h6>PHY 103 2.0</h6>
+                        </td>
+                        <td style="width: 760px">
+                          <h6>
+                            Mechanics &amp; Properties Of Matter&nbsp; &nbsp;
+                            &nbsp; &nbsp;
+                          </h6>
+                        </td>
+                        <td>
+                          <h6>Core</h6>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <h6>PHY 104 1.0</h6>
+                        </td>
+                        <td>
+                          <h6>Electricity &amp; Magnetism</h6>
+                        </td>
+                        <td>
+                          <h6>Core</h6>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <h6>PHY 105 1.0</h6>
+                        </td>
+                        <td>
+                          <h6>Waves &amp; Vibrations</h6>
+                        </td>
+                        <td>
+                          <h6>Core</h6>
+                        </td>
+                      </tr>
+                    </tbody>
+                    <tfoot>
+                      <tr style="padding-top: 101px"></tr>
+                    </tfoot>
+                  </table>
+                </div>
+              </div>
+              <div class="card-body">
+                <h5 style="width: 2000px; font-size: 20px">
+                  &nbsp; Second Semester
+                </h5>
+                <div
+                  class="table-responsive table mt-2"
+                  id="dataTable-14"
+                  role="grid"
+                  aria-describedby="dataTable_info"
+                >
+                  <table class="table my-0" id="dataTable">
+                    <thead>
+                      <tr>
+                        <th>Subject Code</th>
+                        <th>Subject Name</th>
+                        <th>Course Type</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td style="width: 370px">
+                          <h6>PHY 106 2.0</h6>
+                        </td>
+                        <td style="width: 760px">
+                          <h6>Practical ( Semester I &amp; II )</h6>
+                        </td>
+                        <td>
+                          <h6>Compulsory</h6>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <h6>PHY 107 2.0</h6>
+                        </td>
+                        <td>
+                          <h6>Applied Electricity &amp; Basic Electronics</h6>
+                        </td>
+                        <td>
+                          <h6>Core</h6>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <h6>PHY 108 2.0</h6>
+                        </td>
+                        <td>
+                          <h6>Thermodynamics</h6>
+                        </td>
+                        <td>
+                          <h6>Core</h6>
+                        </td>
+                      </tr>
+                    </tbody>
+                    <tfoot>
+                      <tr style="padding-top: 101px"></tr>
+                    </tfoot>
+                  </table>
+                </div>
+              </div>
+              <div class="card-body">
+                <h4>2ND YEAR</h4>
+                <h5 style="width: 2000px; font-size: 20px">
+                  &nbsp; First Semester
+                </h5>
+                <div
+                  class="table-responsive table mt-2"
+                  id="dataTable-15"
+                  role="grid"
+                  aria-describedby="dataTable_info"
+                >
+                  <table class="table my-0" id="dataTable">
+                    <thead>
+                      <tr>
+                        <th>Subject Code</th>
+                        <th>Subject Name</th>
+                        <th>Course Type</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td style="width: 370px">
+                          <h6>PHY 201 2.0</h6>
+                        </td>
+                        <td style="width: 760px">
+                          <h6>Optics I</h6>
+                        </td>
+                        <td>
+                          <h6>Core</h6>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <h6>PHY 202 2.0</h6>
+                        </td>
+                        <td>
+                          <h6>
+                            Analog &amp; Digital Electronics&nbsp; &nbsp; &nbsp;
+                            &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;
+                          </h6>
+                        </td>
+                        <td>
+                          <h6>Core</h6>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <h6>PHY 203 1.0</h6>
+                        </td>
+                        <td>
+                          <h6>Physics Practical ( Optics)</h6>
+                        </td>
+                        <td>
+                          <h6>Compulsory</h6>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <h6>PHY 204 1.0</h6>
+                        </td>
+                        <td>
+                          <h6>Physics Practical ( Electronics )</h6>
+                        </td>
+                        <td>
+                          <h6>Compulsory</h6>
+                        </td>
+                      </tr>
+                    </tbody>
+                    <tfoot>
+                      <tr style="padding-top: 101px"></tr>
+                    </tfoot>
+                  </table>
+                </div>
+              </div>
+              <div class="card-body">
+                <h5 style="width: 2000px; font-size: 20px">
+                  &nbsp; Second Semester
+                </h5>
+                <div
+                  class="table-responsive table mt-2"
+                  id="dataTable-16"
+                  role="grid"
+                  aria-describedby="dataTable_info"
+                >
+                  <table class="table my-0" id="dataTable">
+                    <thead>
+                      <tr>
+                        <th style="width: 370px">Subject Code</th>
+                        <th>Subject Name</th>
+                        <th>Course Type</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>
+                          <h6>PHY 205 1.0</h6>
+                        </td>
+                        <td style="width: 760px">
+                          <h6>Statistical Physics I</h6>
+                        </td>
+                        <td>
+                          <h6>Core</h6>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <h6>PHY 206 1.0</h6>
+                        </td>
+                        <td>
+                          <h6>Mathematical Physics I</h6>
+                        </td>
+                        <td>
+                          <h6>Core</h6>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <h6>PHY 207 1.0</h6>
+                        </td>
+                        <td>
+                          <h6>Special Theory Of Relativity</h6>
+                        </td>
+                        <td>
+                          <h6>Core</h6>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <h6>PHY 208 1.0</h6>
+                        </td>
+                        <td>
+                          <h6>
+                            Atomics &amp; Nuclear Physics&nbsp; &nbsp; &nbsp;
+                            &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+                          </h6>
+                        </td>
+                        <td>
+                          <h6>Core</h6>
+                        </td>
+                      </tr>
+                    </tbody>
+                    <tfoot>
+                      <tr style="padding-top: 101px"></tr>
+                    </tfoot>
+                  </table>
+                </div>
+              </div>
+              <div class="card-body">
+                <h4>3RD YEAR</h4>
+                <h5 style="width: 2000px; font-size: 20px">
+                  &nbsp; First Semester
+                </h5>
+                <div
+                  class="table-responsive table mt-2"
+                  id="dataTable-17"
+                  role="grid"
+                  aria-describedby="dataTable_info"
+                >
+                  <table class="table my-0" id="dataTable">
+                    <thead>
+                      <tr>
+                        <th>Subject Code</th>
+                        <th>Subject Name</th>
+                        <th>Course Type</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td style="width: 370px">
+                          <h6>PHY 301 1.0</h6>
+                        </td>
+                        <td style="width: 760px">
+                          <h6>
+                            Electromagnetic Theory I&nbsp; &nbsp; &nbsp; &nbsp;
+                            &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+                            &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+                          </h6>
+                        </td>
+                        <td>
+                          <h6>Core</h6>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <h6>PHY 302 1.0</h6>
+                        </td>
+                        <td>
+                          <h6>Quantum Mechanics</h6>
+                        </td>
+                        <td>
+                          <h6>Core</h6>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <h6>PHY 305 1.0</h6>
+                        </td>
+                        <td>
+                          <h6>Geophysics I</h6>
+                        </td>
+                        <td>
+                          <h6>Optional</h6>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <h6>PHY 306 1.0</h6>
+                        </td>
+                        <td>
+                          <h6>
+                            Solid State Physics&nbsp; &nbsp; &nbsp; &nbsp;
+                            &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+                            &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp;
+                          </h6>
+                        </td>
+                        <td>
+                          <h6>Optional</h6>
+                        </td>
+                      </tr>
+                    </tbody>
+                    <tfoot>
+                      <tr style="padding-top: 101px"></tr>
+                    </tfoot>
+                  </table>
+                </div>
+              </div>
+              <div class="card-body">
+                <h5 style="width: 2000px; font-size: 20px">
+                  &nbsp; Second Semester
+                </h5>
+                <div
+                  class="table-responsive table mt-2"
+                  id="dataTable-18"
+                  role="grid"
+                  aria-describedby="dataTable_info"
+                >
+                  <table class="table my-0" id="dataTable">
+                    <thead>
+                      <tr>
+                        <th>Subject Code</th>
+                        <th>Subject Name</th>
+                        <th>Course Type</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td style="width: 370px">
+                          <h6>PHY 309 1.0</h6>
+                        </td>
+                        <td style="width: 760px">
+                          <h6>Introduction To Microprocessors</h6>
+                        </td>
+                        <td>
+                          <h6>Core</h6>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <h6>PHY 310 1.0</h6>
+                        </td>
+                        <td>
+                          <h6>Space Physics</h6>
+                        </td>
+                        <td>
+                          <h6>Optional</h6>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <h6>PHY 311 1.0</h6>
+                        </td>
+                        <td>
+                          <h6>Introduction To Computer Hardware</h6>
+                        </td>
+                        <td>
+                          <h6>Optional</h6>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <h6>PHY 312 1.0</h6>
+                        </td>
+                        <td>
+                          <h6>Industrial Physics</h6>
+                        </td>
+                        <td>
+                          <h6>Optional</h6>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <h6>PHY 314 1.0</h6>
+                        </td>
+                        <td>
+                          <h6>Astronomy</h6>
+                        </td>
+                        <td>
+                          <h6>Optional</h6>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <h6>PHY 315 1.0</h6>
+                        </td>
+                        <td>
+                          <h6>Metrology</h6>
+                        </td>
+                        <td>
+                          <h6>Optional</h6>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <h6>PHY 318 1.0</h6>
+                        </td>
+                        <td>
+                          <h6>Nano Physics</h6>
+                        </td>
+                        <td>
+                          <h6>Optional</h6>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <h6>PHY 307 1.0</h6>
+                        </td>
+                        <td>
+                          <h6>
+                            Practical ( Applied ) - Semester I &amp; II&nbsp;
+                          </h6>
+                        </td>
+                        <td>
+                          <h6>Compulsory</h6>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <h6>PHY 308 1.0</h6>
+                        </td>
+                        <td>
+                          <h6>
+                            Practical ( Computational ) - Semester I &amp;
+                            II&nbsp;
+                          </h6>
+                        </td>
+                        <td>
+                          <h6>Compulsory</h6>
+                        </td>
+                      </tr>
+                    </tbody>
+                    <tfoot>
+                      <tr style="padding-top: 101px"></tr>
+                    </tfoot>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <footer class="bg-white sticky-footer" style="height: 60px">
+          <div class="container my-auto">
+            <div class="text-center my-auto copyright">
+              <span>Copyright © Brand 2023</span>
+            </div>
+          </div>
+        </footer>
+      </div>
+      <a class="border rounded d-inline scroll-to-top" href="#page-top"
+        ><i class="fas fa-angle-up"></i
+      ></a>
+    </div>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="assets/js/bs-init.js"></script>
+    <script src="assets/js/theme.js"></script>
+  </body>
+</html>
